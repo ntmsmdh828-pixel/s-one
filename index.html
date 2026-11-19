@@ -1,34 +1,1450 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="서원씨앤씨 홈페이지 디자인 초안"><title>서원씨앤씨 | 산업을 잇는 더 나은 기술</title>
-<style>
-:root{--accent:#006b59;--ink:#152c32;--muted:#647577;--line:#dce4e2;--pale:#eff4f2}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);background:#fff}button,input,textarea,select{font:inherit}button,a,input{ -webkit-tap-highlight-color:transparent}button,a{cursor:pointer}a{color:inherit;text-decoration:none}button{border:0}button:focus-visible,a:focus-visible{outline:3px solid #e6ac42;outline-offset:4px}.wrap{max-width:1320px;margin:auto;padding:0 48px}.topline{font-size:12px;letter-spacing:.14em;background:var(--ink);color:#fff;padding:10px 0}.topline .wrap{display:flex;justify-content:space-between}.topline span:last-child{opacity:.65;letter-spacing:0}header{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:800;letter-spacing:-1px}.mark{width:39px;height:39px;background:var(--accent);color:white;display:grid;place-items:center;font-size:31px;font-style:italic;clip-path:polygon(18% 0,100% 0,82% 100%,0 100%)}.brand small{display:block;font-size:10px;letter-spacing:3px;margin-top:3px;color:var(--muted)}nav{display:flex;gap:32px;font-size:15px;font-weight:600}.nav .contact{padding:12px 20px;background:var(--accent);color:white}.menu{display:none}.hero{position:relative;overflow:hidden;background:#e9eeec;min-height:635px}.hero .wrap{position:relative;z-index:2;padding-top:100px;padding-bottom:95px}.eyebrow{font-size:13px;letter-spacing:.19em;font-weight:700;color:var(--accent);margin:0 0 25px}.hero h1{font-size:clamp(40px,4.6vw,64px);line-height:1.26;letter-spacing:-3px;max-width:650px;margin:0 0 26px;white-space:pre-line}.hero p.desc{line-height:1.9;color:#526664;font-size:17px;max-width:430px;white-space:pre-line}.cta{display:inline-block;padding:16px 28px;background:var(--accent);color:white;font-size:15px;font-weight:600;margin-top:20px}.heroart{position:absolute;right:-5%;top:0;width:66%;height:100%;object-fit:cover;opacity:1}.heroshade{position:absolute;inset:0;background:linear-gradient(90deg,#e9eeec 0%,#e9eeecf5 31%,#e9eeec00 65%)}.herobottom{position:absolute;bottom:24px;left:48px;right:48px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.17em;color:#667b77}.herobottom span:first-child{border-top:2px solid var(--accent);padding-top:10px}.quick{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.quick a{padding:27px 30px;border-right:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-weight:600}.quick a:last-child{border:0}.quick small{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:400}.section{padding:98px 0}.heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}h2{font-size:38px;letter-spacing:-1.8px;margin:0;line-height:1.4}.heading p{font-size:16px;line-height:1.8;color:var(--muted);margin:0;max-width:440px}.heading .eyebrow{margin-bottom:12px}.draft-tag{font-size:12px;border:1px solid var(--line);border-radius:50px;padding:6px 10px;color:var(--muted);display:inline-block;margin-top:16px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filters button{padding:9px 20px;background:#f0f3f2;border-radius:30px;font-size:14px;color:var(--muted)}.filters button.active{background:var(--accent);color:white}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.product{border:1px solid var(--line);background:white;text-align:left;padding:0;color:var(--ink);transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-5px);box-shadow:0 15px 30px #132d3410}.product img{width:100%;height:220px;object-fit:cover;background:var(--pale)}.product .body{padding:26px}.product .type{font-size:11px;letter-spacing:.13em;color:var(--accent);margin:0 0 10px}.product h3{font-size:23px;letter-spacing:-.8px;margin:0 0 12px}.product p{font-size:15px;color:var(--muted);line-height:1.8;margin:0}.product .more{display:block;margin-top:25px;font-size:13px;font-weight:600}.about{background:var(--ink);color:white;overflow:hidden}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.about .eyebrow{color:#81cbb4}.about h2{font-size:43px;white-space:pre-line}.about p{color:#bbcbcc;line-height:1.95;font-size:16px}.aboutart{height:360px;width:100%;object-fit:cover}.values{display:flex;gap:28px;border-top:1px solid #ffffff30;margin-top:28px;padding-top:24px}.values b{font-size:14px}.values small{display:block;color:#9eafae;font-size:12px;margin-top:8px}.markets{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.market{background:#fff;padding:34px}.market .symbol{color:var(--accent);font-size:37px;margin-bottom:25px}.market h3{font-size:21px;margin:0 0 14px}.market p{font-size:15px;line-height:1.8;color:var(--muted);margin:0}.contactband{background:var(--pale);padding:65px 0}.contactgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px}.contactgrid p{line-height:1.8;color:var(--muted)}.contactinfo{border-top:2px solid var(--accent)}.inforow{display:grid;grid-template-columns:90px 1fr;gap:15px;border-bottom:1px solid #d0dcd7;padding:18px 0;font-size:15px;line-height:1.6;word-break:break-word}.inforow span{color:var(--muted)}footer{padding:38px 0 85px;font-size:12px;color:var(--muted)}.footerrow{display:flex;justify-content:space-between;gap:24px}.footerrow strong{font-size:18px;color:var(--ink)}.footnote{margin-top:20px;line-height:1.8;font-size:12px}dialog{max-width:600px;width:calc(100% - 40px);border:0;padding:40px;color:var(--ink);box-shadow:0 20px 70px #0004}dialog::backdrop{background:#10282db3}dialog h2{font-size:29px}dialog p{line-height:1.8;white-space:pre-line;color:var(--muted)}dialog .close{float:right;padding:8px 12px;background:var(--pale)}dialog .cta{border:0}
-@media(max-width:1000px){.wrap{padding-left:28px;padding-right:28px}nav{gap:18px}.brand{font-size:20px}.heroart{width:78%;right:-20%;opacity:.65}.hero h1{font-size:52px}.aboutgrid{gap:35px}.products{gap:14px}.product .body{padding:20px}.contactgrid{gap:40px}}
-@media(max-width:720px){.topline .wrap span:last-child{display:none}.nav{height:74px}.nav .contact{display:none}.menu{display:block;background:none;font-size:15px;padding:8px}nav{display:none;position:absolute;top:74px;left:0;right:0;background:white;flex-direction:column;padding:24px 28px;border-bottom:1px solid var(--line)}nav.open{display:flex}.hero{min-height:670px}.hero .wrap{padding-top:62px}.hero h1{font-size:43px;letter-spacing:-2px}.heroart{width:110%;height:60%;top:auto;bottom:0;right:-30%;opacity:.65}.heroshade{background:linear-gradient(180deg,#e9eeec 0%,#e9eeecdb 50%,#e9eeec10 100%)}.hero p.desc{font-size:15px;max-width:310px}.herobottom{left:28px;right:28px}.herobottom span:last-child{display:none}.quick a{padding:22px 10px;font-size:13px;text-align:center;justify-content:center}.quick small{display:none}.section{padding:65px 0}.heading{display:block}.heading p{margin-top:18px;font-size:15px}h2{font-size:30px}.products,.markets,.aboutgrid,.contactgrid{grid-template-columns:1fr}.product{display:grid;grid-template-columns:38% 1fr}.product img{height:100%;min-height:210px}.product h3{font-size:21px}.product .more{margin-top:15px}.about h2{font-size:34px}.aboutart{height:260px}.aboutgrid{gap:30px}.market{padding:28px}.market .symbol{float:right;margin:0}.contactgrid{gap:24px}.footerrow{flex-direction:column}.values{gap:20px}.hero .cta{margin-top:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style></head><body>
-<div class="topline"><div class="wrap"><span>SEOWON C&amp;C · INDUSTRIAL SOLUTIONS</span><span>서원씨앤씨 홈페이지 디자인 초안</span></div></div>
-<header><div class="wrap nav"><a class="brand" href="#" aria-label="서원씨앤씨 홈"><span class="mark">S</span><span><span data-text="company"></span><small>SEOWON C&amp;C</small></span></a><nav id="nav"><a href="#about">회사소개</a><a href="#products">제품소개</a><a href="#markets">적용분야</a><a href="#contact">고객지원</a></nav><a class="contact" href="#contact">제품 문의</a><button class="menu" aria-expanded="false" aria-controls="nav">메뉴</button></div></header>
-<main><section class="hero"><img class="heroart" id="heroImage" alt="산업용 배관을 표현한 컨셉 일러스트"><div class="heroshade"></div><div class="wrap"><p class="eyebrow" data-text="eyebrow"></p><h1 data-text="headline"></h1><p class="desc" data-text="intro"></p><a class="cta" href="#products">제품 살펴보기</a></div><div class="herobottom"><span>CONNECTING INDUSTRY. BUILDING TRUST.</span><span>SCROLL TO EXPLORE</span></div></section>
-<div class="wrap"><div class="quick"><a href="#products">제품 솔루션 <small>PRODUCTS</small></a><a href="#markets">산업별 적용 <small>APPLICATIONS</small></a><a href="#contact">기술 상담 <small>CONTACT</small></a></div></div>
-<section id="products" class="section"><div class="wrap"><div class="heading"><div><p class="eyebrow">OUR PRODUCTS</p><h2 data-text="productHeading"></h2></div><p>현장에 필요한 제품을 한눈에.<br>용도에 맞는 솔루션을 살펴보세요.<br><span class="draft-tag">제품 분류·설명은 편집용 예시입니다</span></p></div><div class="filters" aria-label="제품 분류"><button class="active" data-filter="all">전체 제품</button><button data-filter="piping">배관 시스템</button><button data-filter="parts">가공·부품</button><button data-filter="support">기술 지원</button></div><div class="products" id="productList"></div></div></section>
-<section id="about" class="section about"><div class="wrap aboutgrid"><div><p class="eyebrow">ABOUT SEOWON C&amp;C</p><h2 data-text="aboutHeading"></h2><p data-text="aboutText"></p><div class="values"><div><b>신뢰</b><small>TRUST</small></div><div><b>기술</b><small>TECHNOLOGY</small></div><div><b>파트너십</b><small>PARTNERSHIP</small></div></div></div><img class="aboutart" id="aboutImage" alt="연결과 정밀함을 표현한 산업 배관 일러스트"></div></section>
-<section id="markets" class="section"><div class="wrap"><div class="heading"><div><p class="eyebrow">APPLICATIONS</p><h2>다양한 현장, 하나의 연결</h2></div><p>적용 분야를 소개하는 공간입니다.<br>실제 사업 영역에 맞게 직접 수정해 주세요.</p></div><div class="markets" id="marketList"></div></div></section>
-<section id="contact" class="contactband"><div class="wrap contactgrid"><div><p class="eyebrow">LET’S WORK TOGETHER</p><h2 data-text="contactHeading"></h2><p data-text="contactText"></p><button class="cta" id="inquiry">문의 방법 확인</button></div><div class="contactinfo"><div class="inforow"><span>대표전화</span><strong data-text="phone"></strong></div><div class="inforow"><span>이메일</span><strong data-text="email"></strong></div><div class="inforow"><span>주소</span><strong data-text="address"></strong></div></div></div></section></main>
-<footer><div class="wrap"><div class="footerrow"><strong data-text="company"></strong><span>© <span id="year"></span> SEOWON C&amp;C. All rights reserved.</span><a href="http://www.s-one.co.kr/" target="_blank" rel="noopener">기존 홈페이지</a></div><div class="footnote">검토용 초안 · 회사 소개와 제품·적용 분야는 제안 문구입니다. 실제 사양·인증·공급 범위는 확인 후 반영해 주세요.<br>일러스트는 제품 실물이 아닌 디자인용 이미지입니다.</div></div></footer>
-<dialog id="detail"><button class="close" id="closeDetail">닫기</button><p class="eyebrow" id="detailLabel"></p><h2 id="detailTitle"></h2><p id="detailText"></p><button class="cta" id="detailContact">문의 정보 보기</button></dialog>
-<script id="initialData" type="application/json">{"company":"서원씨앤씨","eyebrow":"Plastic Piping Systems for Marine, Offshore and Industrial Applications","headline":"S-ONE C&C CORP","intro":"현장의 요구에서 시작되는 더 나은 솔루션.\n서원씨앤씨와 함께 다음을 준비하세요.","productHeading":"현장을 위한 제품 솔루션","aboutHeading":"기술의 가치를,\n현장의 가능성으로.","aboutText":"서원씨앤씨의 기술과 사업을 소개하는 공간입니다. 고객이 필요로 하는 가치와 회사의 강점을 담아, 함께 성장하는 파트너로서의 이야기를 전해 보세요.","contactHeading":"함께, 더 나은 답을 찾습니다.","contactText":"제품 및 기술 상담을 위한 연락처를 등록해 주세요.\n담당 부서와 상담 가능 시간을 함께 안내할 수 있습니다.","phone":"대표전화 입력 예정","email":"이메일 입력 예정","address":"회사 주소 입력 예정","accent":"#006b59","heroImage":"","aboutImage":"","products":[{"name":"배관 시스템","en":"PIPING SYSTEMS","category":"piping","text":"사용 환경에 맞는 배관 제품과 연결 솔루션을 소개합니다.","detail":"제품 소개 예시입니다. 실제 취급 소재, 규격, 사용 온도, 적용 기준 및 공급 범위를 입력해 주세요.","image":""},{"name":"가공 제품 · 부품","en":"CUSTOMIZED PARTS","category":"parts","text":"현장의 도면과 요구 사항에 맞춘 제품을 소개합니다.","detail":"가공 제품 소개 예시입니다. 가공 가능 소재, 치수 범위, 도면 검토 및 납기 안내를 입력해 주세요.","image":""},{"name":"기술 상담 · 지원","en":"TECHNICAL SUPPORT","category":"support","text":"제품 선정부터 적용 검토까지 필요한 정보를 안내합니다.","detail":"기술 지원 소개 예시입니다. 제공 가능한 상담 범위와 필요한 자료, 담당 부서 연락처를 입력해 주세요.","image":""}],"markets":[{"title":"산업 설비","text":"다양한 산업 현장에서 활용되는 제품과 적용 사례를 소개해 주세요."},{"title":"에너지 · 인프라","text":"설비 및 인프라 관련 사업 영역과 공급 가능한 솔루션을 소개해 주세요."},{"title":"맞춤형 프로젝트","text":"고객의 요구 조건에 맞춰 진행한 프로젝트와 협업 방식을 소개해 주세요."}]}</script>
-<script>
-const base=JSON.parse(document.getElementById('initialData').textContent);
-let state=structuredClone(base),filter='all';
-const $=id=>document.getElementById(id);
-function art(variant=0){const colors=variant===3?['#102d36','#315661','#6b918b']:['#b4c7c1','#dce6e1','#6e9187'];let pipes='';for(let i=0;i<6;i++){let x=130+(i%3)*180,y=160+Math.floor(i/3)*190; pipes+='<g transform="translate('+x+' '+y+')"><path d="M0 0 L250 -160 L340 -160 L90 0 Z" fill="url(#metal)"/><ellipse cx="45" cy="0" rx="64" ry="72" fill="'+colors[2]+'"/><ellipse cx="45" cy="0" rx="49" ry="56" fill="#173c3b"/><ellipse cx="49" cy="5" rx="40" ry="47" fill="#0c272b"/><path d="M-13 -29 Q-20 25 11 56" fill="none" stroke="#e0eee5" stroke-width="5" opacity=".55"/></g>'}
-let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 650"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="'+colors[1]+'"/><stop offset="1" stop-color="'+colors[0]+'"/></linearGradient><linearGradient id="metal" x1="0" y1="1" x2=".8" y2="0"><stop stop-color="'+colors[2]+'"/><stop offset=".28" stop-color="#d5e2da"/><stop offset=".5" stop-color="#92b5a7"/><stop offset="1" stop-color="#456d66"/></linearGradient><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity=".19"/></pattern></defs><rect width="850" height="650" fill="url(#bg)"/><rect width="850" height="650" fill="url(#grid)"/><g transform="translate('+ (variant===1?-30:90) +' '+(variant===2?180:100)+') rotate(-12 400 300)">'+pipes+'</g><path d="M20 610H830M800 20V630" stroke="#fff" stroke-opacity=".3" fill="none"/></svg>';
-return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)}
-function validImage(v){return typeof v==='string'&&(/^data:image\/(png|jpeg|webp|gif);base64,/.test(v)||/^https?:\/\//.test(v))}
-function getImage(v,fallback){return validImage(v)?v:art(fallback)}
-function render(){document.documentElement.style.setProperty('--accent',/^#[0-9a-f]{6}$/i.test(state.accent)?state.accent:base.accent);document.querySelectorAll('[data-text]').forEach(el=>el.textContent=state[el.dataset.text]);$('heroImage').src=getImage(state.heroImage,0);$('aboutImage').src=getImage(state.aboutImage,3);$('productList').replaceChildren();state.products.forEach((p,i)=>{if(filter!=='all'&&p.category!==filter)return;const b=document.createElement('button');b.className='product';b.setAttribute('aria-label',p.name+' 상세 보기');const img=document.createElement('img');img.src=getImage(p.image,i);img.alt=p.image?p.name:'제품 컨셉 일러스트';const body=document.createElement('div');body.className='body';[['p','type',p.en],['h3','',p.name],['p','',p.text],['span','more','자세히 보기 +']].forEach(([tag,cls,t])=>{let el=document.createElement(tag);el.className=cls;el.textContent=t;body.append(el)});b.append(img,body);b.onclick=()=>openDetail(p.en,p.name,p.detail+'\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.');$('productList').append(b)});$('marketList').replaceChildren();state.markets.forEach((m,i)=>{const box=document.createElement('article');box.className='market';const sym=document.createElement('div');sym.className='symbol';sym.setAttribute('aria-hidden','true');sym.textContent=['▦','◈','⌘'][i];const h=document.createElement('h3');h.textContent=m.title;const p=document.createElement('p');p.textContent=m.text;box.append(sym,h,p);$('marketList').append(box)});$('year').textContent=new Date().getFullYear()}
-function openDetail(label,title,txt){$('detailLabel').textContent=label;$('detailTitle').textContent=title;$('detailText').textContent=txt;$('detail').showModal()}
-$('closeDetail').onclick=()=>$('detail').close();$('detailContact').onclick=()=>{$('detail').close();location.hash='contact'};$('inquiry').onclick=()=>openDetail('CONTACT','문의 안내','대표전화: '+state.phone+'\n이메일: '+state.email+'\n주소: '+state.address+'\n\n이 초안은 온라인 문의를 전송하지 않습니다. 실제 연락처를 입력한 후 해당 연락처로 문의해 주세요.');
-document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});render()});
-document.querySelector('.menu').onclick=function(){const open=$('nav').classList.toggle('open');this.setAttribute('aria-expanded',String(open))};document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>{$('nav').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false')});render();
-</script></body></html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="서원씨앤씨 홈페이지 디자인 초안">
+  <title>서원씨앤씨 | 산업을 잇는 더 나은 기술</title>
+  <style>
+    :root {
+      --accent: #2458a6;
+      --ink: #172b49;
+      --muted: #62738c;
+      --line: #dce4ef;
+      --pale: #f0f4fa
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      color: var(--ink);
+      background: #fff
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit
+    }
+
+    button,
+    a,
+    input {
+      -webkit-tap-highlight-color: transparent
+    }
+
+    button,
+    a {
+      cursor: pointer
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      border: 0
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #e6ac42;
+      outline-offset: 4px
+    }
+
+    .wrap {
+      max-width: 1320px;
+      margin: auto;
+      padding: 0 48px
+    }
+
+    .topline {
+      font-size: 12px;
+      letter-spacing: .14em;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 0
+    }
+
+    .topline .wrap {
+      display: flex;
+      justify-content: space-between
+    }
+
+    .topline span:last-child {
+      opacity: .65;
+      letter-spacing: 0
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fffffff5;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px)
+    }
+
+    .nav {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -1px
+    }
+
+    .mark {
+      width: 39px;
+      height: 39px;
+      background: var(--accent);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 31px;
+      font-style: italic;
+      clip-path: polygon(18% 0, 100% 0, 82% 100%, 0 100%)
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-top: 3px;
+      color: var(--muted)
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      font-size: 15px;
+      font-weight: 600
+    }
+
+    .nav .contact {
+      padding: 12px 20px;
+      background: var(--accent);
+      color: white
+    }
+
+    .menu {
+      display: none
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #edf2fa;
+      min-height: 635px
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 2;
+      padding-top: 100px;
+      padding-bottom: 95px
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: .19em;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 25px;
+      white-space: pre-line
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 4.6vw, 64px);
+      line-height: 1.26;
+      letter-spacing: -3px;
+      max-width: 650px;
+      margin: 0 0 26px;
+      white-space: pre-line
+    }
+
+    .hero p.desc {
+      line-height: 1.9;
+      color: #536781;
+      font-size: 17px;
+      max-width: 430px;
+      white-space: pre-line
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 16px 28px;
+      background: var(--accent);
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 20px
+    }
+
+    .heroart {
+      position: absolute;
+      right: -5%;
+      top: 0;
+      width: 66%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1
+    }
+
+    .heroshade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #edf2fa 0%, #edf2faf5 31%, #edf2fa00 65%)
+    }
+
+    .herobottom {
+      position: absolute;
+      bottom: 24px;
+      left: 48px;
+      right: 48px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      letter-spacing: .17em;
+      color: #637b9a
+    }
+
+    .herobottom span:first-child {
+      border-top: 2px solid var(--accent);
+      padding-top: 10px
+    }
+
+    .quick {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .quick a {
+      padding: 27px 30px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600
+    }
+
+    .quick a:last-child {
+      border: 0
+    }
+
+    .quick small {
+      font-size: 11px;
+      letter-spacing: .12em;
+      color: var(--muted);
+      font-weight: 400
+    }
+
+    .section {
+      padding: 98px 0
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 36px
+    }
+
+    h2 {
+      font-size: 38px;
+      letter-spacing: -1.8px;
+      margin: 0;
+      line-height: 1.4
+    }
+
+    .heading p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 0;
+      max-width: 440px
+    }
+
+    .heading .eyebrow {
+      margin-bottom: 12px
+    }
+
+    .draft-tag {
+      font-size: 12px;
+      border: 1px solid var(--line);
+      border-radius: 50px;
+      padding: 6px 10px;
+      color: var(--muted);
+      display: inline-block;
+      margin-top: 16px
+    }
+
+    .filters {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-bottom: 28px
+    }
+
+    .filters button {
+      padding: 9px 20px;
+      background: #f0f3f8;
+      border-radius: 30px;
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    .filters button.active {
+      background: var(--accent);
+      color: white
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .product {
+      border: 1px solid var(--line);
+      background: white;
+      text-align: left;
+      padding: 0;
+      color: var(--ink);
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px #132d3410
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: var(--pale)
+    }
+
+    .product .body {
+      padding: 26px
+    }
+
+    .product .type {
+      font-size: 11px;
+      letter-spacing: .13em;
+      color: var(--accent);
+      margin: 0 0 10px
+    }
+
+    .product h3 {
+      font-size: 23px;
+      letter-spacing: -.8px;
+      margin: 0 0 12px
+    }
+
+    .product p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0
+    }
+
+    .product .more {
+      display: block;
+      margin-top: 25px;
+      font-size: 13px;
+      font-weight: 600
+    }
+
+    .about {
+      background: var(--ink);
+      color: white;
+      overflow: hidden
+    }
+
+    .aboutgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .about .eyebrow {
+      color: #8cb9f5
+    }
+
+    .about h2 {
+      font-size: 43px;
+      white-space: pre-line
+    }
+
+    .about p {
+      color: #c3d0e3;
+      line-height: 1.95;
+      font-size: 16px
+    }
+
+    .aboutart {
+      height: 360px;
+      width: 100%;
+      object-fit: cover
+    }
+
+    .values {
+      display: flex;
+      gap: 28px;
+      border-top: 1px solid #ffffff30;
+      margin-top: 28px;
+      padding-top: 24px
+    }
+
+    .values b {
+      font-size: 14px
+    }
+
+    .values small {
+      display: block;
+      color: #a8bad4;
+      font-size: 12px;
+      margin-top: 8px
+    }
+
+    .markets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line)
+    }
+
+    .market {
+      background: #fff;
+      padding: 34px
+    }
+
+    .market .symbol {
+      color: var(--accent);
+      font-size: 37px;
+      margin-bottom: 25px
+    }
+
+    .market h3 {
+      font-size: 21px;
+      margin: 0 0 14px
+    }
+
+    .market p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .contactband {
+      background: var(--pale);
+      padding: 65px 0
+    }
+
+    .contactgrid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px
+    }
+
+    .contactgrid p {
+      line-height: 1.8;
+      color: var(--muted);
+      white-space: pre-line;
+    }
+
+    .contactinfo {
+      border-top: 2px solid var(--accent)
+    }
+
+    .inforow {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 15px;
+      border-bottom: 1px solid #d2ddef;
+      padding: 18px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      word-break: break-word
+    }
+
+    .inforow span {
+      color: var(--muted)
+    }
+
+    footer {
+      padding: 38px 0 85px;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .footerrow {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .footerrow strong {
+      font-size: 18px;
+      color: var(--ink)
+    }
+
+    .footnote {
+      margin-top: 20px;
+      line-height: 1.8;
+      font-size: 12px
+    }
+
+    dialog {
+      max-width: 600px;
+      width: calc(100% - 40px);
+      border: 0;
+      padding: 40px;
+      color: var(--ink);
+      box-shadow: 0 20px 70px #0004
+    }
+
+    dialog::backdrop {
+      background: #10282db3
+    }
+
+    dialog h2 {
+      font-size: 29px
+    }
+
+    dialog p {
+      line-height: 1.8;
+      white-space: pre-line;
+      color: var(--muted)
+    }
+
+    dialog .close {
+      float: right;
+      padding: 8px 12px;
+      background: var(--pale)
+    }
+
+    dialog .cta {
+      border: 0
+    }
+
+    @media(max-width:1000px) {
+      .wrap {
+        padding-left: 28px;
+        padding-right: 28px
+      }
+
+      nav {
+        gap: 18px
+      }
+
+      .brand {
+        font-size: 20px
+      }
+
+      .heroart {
+        width: 78%;
+        right: -20%;
+        opacity: .65
+      }
+
+      .hero h1 {
+        font-size: 52px
+      }
+
+      .aboutgrid {
+        gap: 35px
+      }
+
+      .products {
+        gap: 14px
+      }
+
+      .product .body {
+        padding: 20px
+      }
+
+      .contactgrid {
+        gap: 40px
+      }
+    }
+
+    @media(max-width:720px) {
+      .topline .wrap span:last-child {
+        display: none
+      }
+
+      .nav {
+        height: 74px
+      }
+
+      .nav .contact {
+        display: none
+      }
+
+      .menu {
+        display: block;
+        background: none;
+        font-size: 15px;
+        padding: 8px
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 24px 28px;
+        border-bottom: 1px solid var(--line)
+      }
+
+      nav.open {
+        display: flex
+      }
+
+      .hero {
+        min-height: 670px
+      }
+
+      .hero .wrap {
+        padding-top: 62px
+      }
+
+      .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px
+      }
+
+      .heroart {
+        width: 110%;
+        height: 60%;
+        top: auto;
+        bottom: 0;
+        right: -30%;
+        opacity: .65
+      }
+
+      .heroshade {
+        background: linear-gradient(180deg, #edf2fa 0%, #edf2fadb 50%, #edf2fa10 100%)
+      }
+
+      .hero p.desc {
+        font-size: 15px;
+        max-width: 310px
+      }
+
+      .herobottom {
+        left: 28px;
+        right: 28px
+      }
+
+      .herobottom span:last-child {
+        display: none
+      }
+
+      .quick a {
+        padding: 22px 10px;
+        font-size: 13px;
+        text-align: center;
+        justify-content: center
+      }
+
+      .quick small {
+        display: none
+      }
+
+      .section {
+        padding: 65px 0
+      }
+
+      .heading {
+        display: block
+      }
+
+      .heading p {
+        margin-top: 18px;
+        font-size: 15px
+      }
+
+      h2 {
+        font-size: 30px
+      }
+
+      .products,
+      .markets,
+      .aboutgrid,
+      .contactgrid {
+        grid-template-columns: 1fr
+      }
+
+      .product {
+        display: grid;
+        grid-template-columns: 38% 1fr
+      }
+
+      .product img {
+        height: 100%;
+        min-height: 210px
+      }
+
+      .product h3 {
+        font-size: 21px
+      }
+
+      .product .more {
+        margin-top: 15px
+      }
+
+      .about h2 {
+        font-size: 34px
+      }
+
+      .aboutart {
+        height: 260px
+      }
+
+      .aboutgrid {
+        gap: 30px
+      }
+
+      .market {
+        padding: 28px
+      }
+
+      .market .symbol {
+        float: right;
+        margin: 0
+      }
+
+      .contactgrid {
+        gap: 24px
+      }
+
+      .footerrow {
+        flex-direction: column
+      }
+
+      .values {
+        gap: 20px
+      }
+
+      .hero .cta {
+        margin-top: 12px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      * {
+        transition: none !important
+      }
+    }
+
+    /* 상단 메뉴와 하위 항목 */
+    #nav {
+      gap: 4px;
+      align-items: center
+    }
+
+    .nav-group {
+      position: relative
+    }
+
+    .nav-trigger {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .nav-trigger:hover,
+    .nav-trigger[aria-expanded="true"] {
+      background: var(--accent);
+      color: white
+    }
+
+    .chevron {
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -4px
+    }
+
+    .nav-trigger[aria-expanded="true"] .chevron {
+      transform: rotate(225deg);
+      margin-top: 4px
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 260px;
+      padding: 12px 0 20px;
+      background: #f2f5fa;
+      border-top: 4px solid var(--accent);
+      border-radius: 0 0 0 30px;
+      box-shadow: 0 16px 35px #102c3220;
+      z-index: 30
+    }
+
+    .submenu[hidden] {
+      display: none
+    }
+
+    .submenu a {
+      display: block;
+      padding: 17px 26px;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      white-space: nowrap
+    }
+
+    .submenu a:hover,
+    .submenu a:focus-visible {
+      color: var(--accent);
+      background: #e2ecfb
+    }
+
+    .nav-group:last-child .submenu {
+      left: auto;
+      right: 0
+    }
+
+    #company-values,
+    #contact-info,
+    .market {
+      scroll-margin-top: 120px
+    }
+
+    @media(min-width:721px) and (max-width:1050px) {
+      .nav {
+        gap: 12px
+      }
+
+      .nav-trigger {
+        padding: 18px 10px;
+        font-size: 15px;
+        gap: 8px
+      }
+
+      .nav .contact {
+        padding: 12px
+      }
+    }
+
+    @media(max-width:720px) {
+      #nav {
+        align-items: stretch;
+        gap: 0;
+        padding: 14px 20px;
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+        box-shadow: 0 14px 20px #172b4910
+      }
+
+      .nav-group {
+        width: 100%;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .nav-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 17px 12px;
+        font-size: 16px
+      }
+
+      .submenu,
+      .nav-group:last-child .submenu {
+        position: static;
+        min-width: 0;
+        width: 100%;
+        padding: 6px 0 12px;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: 2px solid var(--accent)
+      }
+
+      .submenu a {
+        padding: 14px 23px;
+        white-space: normal
+      }
+    }
+
+    /* 회사 로고: 원본 비율 유지 */
+    .brand {
+      flex-shrink: 0;
+      white-space: nowrap;
+      gap: 10px
+    }
+
+    .brand-logo {
+      display: block;
+      width: 100px;
+      height: 58px;
+      object-fit: contain;
+      flex-shrink: 0
+    }
+
+    @media(max-width:1050px) {
+      .brand-logo {
+        width: 78px;
+        height: 48px
+      }
+
+      .brand {
+        gap: 8px
+      }
+    }
+
+    @media(max-width:720px) {
+      .brand-logo {
+        width: 82px;
+        height: 50px
+      }
+    }
+
+    /* Blue palette and more compact typography */
+    .brand {
+      font-size: 20px
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 4vw, 54px);
+      letter-spacing: -1.8px
+    }
+
+    .hero p.desc {
+      font-size: 16px
+    }
+
+    h2 {
+      font-size: 32px;
+      letter-spacing: -1px
+    }
+
+    .about h2 {
+      font-size: 36px
+    }
+
+    .product h3 {
+      font-size: 20px
+    }
+
+    .market h3 {
+      font-size: 19px
+    }
+
+    .nav-trigger,
+    .submenu a {
+      font-size: 14px
+    }
+
+    .submenu a {
+      padding: 14px 24px
+    }
+
+    .cta,
+    .nav .contact {
+      font-size: 14px
+    }
+
+    .quick a {
+      font-size: 15px
+    }
+
+    .about p {
+      font-size: 15px;
+      line-height: 1.9
+    }
+
+    dialog h2 {
+      font-size: 25px
+    }
+
+    @media(max-width:1000px) {
+      .hero h1 {
+        font-size: 44px
+      }
+
+      .brand {
+        font-size: 19px
+      }
+    }
+
+    @media(max-width:720px) {
+      .hero h1 {
+        font-size: 35px;
+        letter-spacing: -1px
+      }
+
+      h2 {
+        font-size: 27px
+      }
+
+      .about h2 {
+        font-size: 29px
+      }
+
+      .product h3 {
+        font-size: 19px
+      }
+
+      .nav-trigger {
+        font-size: 14px
+      }
+
+      .quick a {
+        font-size: 13px
+      }
+    }
+  /* Balanced company wordmark */
+.brand { gap: 12px; }
+.brand > span { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.brand [data-text="company"] { font-size: 21px; font-weight: 700; line-height: 1.15; letter-spacing: -.7px; color: #1c3154; }
+.brand small { margin: 0; font-size: 10px; font-weight: 500; line-height: 1.2; letter-spacing: 1.5px; color: #697b94; }
+@media (max-width: 720px) {
+  .brand { gap: 9px; }
+  .brand > span { gap: 5px; }
+  .brand [data-text="company"] { font-size: 19px; }
+  .brand small { font-size: 9px; letter-spacing: 1.2px; }
+}
+/* Company history: introduction and chronological rows */
+.company-history { background: #fff; }
+.history-grid { display: grid; grid-template-columns: .9fr 1.3fr; gap: 70px; align-items: start; }
+.history-period { margin: 0 0 22px; color: var(--accent); font-size: 17px; font-weight: 700; }
+.history-intro h2 { margin: 0 0 20px; font-size: 29px; }
+.history-message { margin: 0; font-size: 23px; font-weight: 600; line-height: 1.65; letter-spacing: -.6px; color: var(--ink); }
+.history-description { margin: 18px 0 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
+.history-list { margin: 0; border-top: 2px solid #253d60; }
+.history-row { display: grid; grid-template-columns: 100px 1fr; gap: 24px; padding: 34px 0; border-bottom: 1px dashed #d4dce8; }
+.history-row dt { font-size: 28px; line-height: 1.4; font-weight: 700; letter-spacing: -.7px; color: #1c3154; }
+.history-row dd { margin: 0; }
+.history-row ul { margin: 3px 0 0; padding-left: 18px; color: #58677c; font-size: 15px; line-height: 1.9; }
+.history-row li + li { margin-top: 8px; }
+@media(max-width: 900px) { .history-grid { gap: 36px; grid-template-columns: 1fr 1.3fr; } .history-row { grid-template-columns: 76px 1fr; gap: 16px; } }
+@media(max-width: 720px) { .history-grid { grid-template-columns: 1fr; gap: 30px; } .history-intro h2 { font-size: 26px; } .history-message { font-size: 21px; } .history-row { padding: 26px 0; } .history-row dt { font-size: 24px; } .history-row ul { font-size: 14px; } }
+/* Company introduction photo */
+.aboutart { display: block; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 58% 52%; border-radius: 16px; box-shadow: 0 14px 36px rgba(23,43,73,.10); }
+@media(max-width:720px) { .aboutart { height: auto; aspect-ratio: 3 / 2; border-radius: 12px; } }
+/* Equal-width introduction and photo, with balanced value cards */
+.aboutgrid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 48px; align-items: stretch; }
+.aboutgrid > div { min-width: 0; }
+.aboutgrid .aboutart { height: 100%; min-height: 360px; aspect-ratio: auto; object-fit: cover; object-position: 58% 50%; }
+#company-values { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 28px; padding-top: 24px; }
+.value-card { padding: 18px 10px; text-align: center; border: 1px solid rgba(184,208,244,.16); border-radius: 10px; background: rgba(255,255,255,.035); }
+.value-card svg { display: block; width: 30px; height: 30px; margin: 0 auto 14px; color: #a9c9f7; }
+#company-values b { display: block; font-size: 15px; line-height: 1.4; }
+#company-values small { font-size: 9px; letter-spacing: .8px; margin-top: 5px; }
+.about #company-values p { margin: 12px 0 0; font-size: 12px; line-height: 1.8; color: #c2cfe1; word-break: keep-all; }
+@media(max-width:1000px) { .aboutgrid { gap: 28px; } #company-values { gap: 8px; } .value-card { padding: 16px 8px; } }
+@media(max-width:720px) { .aboutgrid { grid-template-columns: minmax(0,1fr); gap: 28px; } .aboutgrid .aboutart { height: auto; min-height: 0; aspect-ratio: 3 / 2; } .about #company-values p { font-size: 11px; } }
+/* Full-width panoramic hero */
+.hero .heroart { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; }
+.hero .heroshade { background: linear-gradient(90deg, rgba(10,29,55,.76) 0%, rgba(10,29,55,.50) 36%, rgba(10,29,55,.12) 70%, rgba(10,29,55,.04) 100%); }
+.hero h1 { color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.15); }
+.hero .eyebrow { color: #d2e5ff; white-space: pre-line; }
+.hero p.desc { color: #edf4ff; }
+.hero .herobottom { color: #e1ecfa; }
+.hero .herobottom span:first-child { border-color: #a9ccff; }
+@media(max-width:720px) {
+  .hero .heroart { inset: 0; width: 100%; height: 100%; object-position: 62% center; }
+  .hero .heroshade { background: linear-gradient(90deg, rgba(10,29,55,.78), rgba(10,29,55,.35)); }
+}
+</style>
+</head>
+
+<body>
+  <div class="topline">
+    <div class="wrap"><span>ENGINEERED FLOW SOLUTIONS</span><span>신뢰로 연결하는 배관 솔루션</span></div>
+  </div>
+  <header>
+    <div class="wrap nav"><a class="brand" href="#" aria-label="서원씨앤씨 홈"><img class="brand-logo" src="./sone-logo.png"
+          alt="서원씨앤씨 로고" width="100" height="58"><span><span data-text="company"></span></span></a>
+      <nav id="nav" aria-label="주 메뉴">
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-controls="sub-company">ABOUT S-ONE<span class="chevron"
+              aria-hidden="true"></span></button>
+          <div class="submenu" id="sub-company" hidden>
+            <a href="#about">회사 소개</a>
+            <a href="#company-values">핵심 가치</a>
+            <a href="#company-history">회사 연혁</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-controls="sub-products">PRODUCTS<span class="chevron"
+              aria-hidden="true"></span></button>
+          <div class="submenu" id="sub-products" hidden>
+            <a href="#products" data-product-filter="all">전체 제품</a>
+            <a href="#products" data-product-filter="piping">배관 시스템</a>
+            <a href="#products" data-product-filter="parts">가공 제품 · 부품</a>
+            <a href="#products" data-product-filter="support">기술 상담 · 지원</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-controls="sub-markets">APPLICATIONS<span class="chevron"
+              aria-hidden="true"></span></button>
+          <div class="submenu" id="sub-markets" hidden>
+            <a href="#market-1">산업 설비</a>
+            <a href="#market-2">에너지 · 인프라</a>
+            <a href="#market-3">맞춤형 프로젝트</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-controls="sub-service">SUPPORT<span class="chevron"
+              aria-hidden="true"></span></button>
+          <div class="submenu" id="sub-service" hidden>
+            <a href="#contact">제품 문의</a>
+            <a href="#contact-info">연락처 · 주소</a>
+          </div>
+        </div>
+      </nav><a class="contact" href="#contact">CONTACT US</a><button class="menu" aria-expanded="false"
+        aria-controls="nav">메뉴</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><img class="heroart" id="heroImage" alt="서원씨앤씨 메인 이미지">
+      <div class="heroshade"></div>
+      <div class="wrap">
+        <p class="eyebrow" data-text="eyebrow"></p>
+        <h1 data-text="headline"></h1>
+        <p class="desc" data-text="intro"></p><a class="cta" href="#products">제품 살펴보기</a>
+      </div>
+      <div class="herobottom"><span>CONNECTING INDUSTRY. BUILDING TRUST.</span><span>SCROLL TO EXPLORE</span></div>
+    </section>
+    <div class="wrap">
+      <div class="quick"><a href="#products">제품 솔루션 <small>PRODUCTS</small></a><a href="#markets">산업별 적용
+          <small>APPLICATIONS</small></a><a href="#contact">기술 상담 <small>CONTACT</small></a></div>
+    </div>
+    <section id="products" class="section">
+      <div class="wrap">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">OUR PRODUCTS</p>
+            <h2 data-text="productHeading"></h2>
+          </div>
+          <p>현장에 필요한 제품을 한눈에.<br>용도에 맞는 솔루션을 살펴보세요.<br><span class="draft-tag">제품 분류·설명은 편집용 예시입니다</span></p>
+        </div>
+        <div class="filters" aria-label="제품 분류"><button class="active" data-filter="all">전체 제품</button><button
+            data-filter="piping">배관 시스템</button><button data-filter="parts">가공·부품</button><button
+            data-filter="support">기술 지원</button></div>
+        <div class="products" id="productList"></div>
+      </div>
+    </section>
+    <section id="about" class="section about">
+      <div class="wrap aboutgrid">
+        <div>
+          <p class="eyebrow">ABOUT SEOWON C&amp;C</p>
+          <h2 data-text="aboutHeading"></h2>
+          <p data-text="aboutText"></p>
+          <div class="values" id="company-values" aria-label="핵심 가치">
+            <div class="value-card">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 3 27 7v8c0 7-11 14-11 14S5 22 5 15V7Z"/><path d="m10 15 4 4 8-8"/></svg>
+              <b>신뢰</b><small>TRUST</small><p>약속을 지키는 품질과<br>책임 있는 서비스</p>
+            </div>
+            <div class="value-card">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m16 3 12 7v12l-12 7-12-7V10Z M4 10l12 7 12-7 M16 17v12 M10 6l12 7v7"/></svg>
+              <b>기술</b><small>TECHNOLOGY</small><p>현장을 이해하는 전문성,<br>용도에 맞는 배관 솔루션</p>
+            </div>
+            <div class="value-card">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="10" r="4"/><path d="M3 27v-4a8 8 0 0 1 16 0v4 M21 6a4 4 0 0 1 0 8 M23 17a8 8 0 0 1 6 8v2"/></svg>
+              <b>파트너십</b><small>PARTNERSHIP</small><p>고객과 함께 고민하고<br>함께 성장하는 협력</p>
+            </div>
+          </div>
+        </div><img class="aboutart" id="aboutImage" alt="악수로 표현한 신뢰와 파트너십" loading="lazy" decoding="async">
+      </div>
+    </section>
+    <section id="company-history" class="section company-history" aria-labelledby="history-title">
+      <div class="wrap history-grid">
+        <div class="history-intro">
+          <p class="history-period">1999 — 현재</p>
+          <h2 id="history-title">회사 연혁</h2>
+          <p class="history-message">배관 기술로 이어온 신뢰,<br>더 넓은 내일을 향합니다.</p>
+          <p class="history-description">1999년부터 이어온 서원씨앤씨의 발자취를 소개합니다.</p>
+        </div>
+        <dl class="history-list">
+          <!-- 편집 방법: dt 안의 연도와 li 안의 내용을 수정하세요. 아래 '예시' 항목은 실제 연혁이 아니며 확인 후 교체하세요. -->
+          <div class="history-row">
+            <dt>2026</dt>
+            <dd><ul><li>[예시] 고객 맞춤형 배관 솔루션 및 기술 지원 강화</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2023</dt>
+            <dd><ul><li>[예시] 산업용 플라스틱 배관 제품군 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2020</dt>
+            <dd><ul><li>[예시] 설계·제작·설치 통합 서비스 체계 강화</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2017</dt>
+            <dd><ul><li>[예시] 해외 고객사 및 파트너 네트워크 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2014</dt>
+            <dd><ul><li>[예시] 선박 거주구용 배관 시스템 공급 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2011</dt>
+            <dd><ul><li>[예시] 플라스틱 배관 가공 및 제작 역량 강화</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2008</dt>
+            <dd><ul><li>[예시] 해외 시장 진출 및 수출 사업 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2005</dt>
+            <dd><ul><li>[예시] 주요 조선·해양 고객사 공급 기반 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>2002</dt>
+            <dd><ul><li>[예시] 플라스틱 배관 및 부속품 공급 품목 확대</li></ul></dd>
+          </div>
+          <div class="history-row">
+            <dt>1999</dt>
+            <dd><ul><li>서원씨앤씨 설립</li></ul></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <section id="markets" class="section">
+      <div class="wrap">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">APPLICATIONS</p>
+            <h2>다양한 현장, 하나의 연결</h2>
+          </div>
+          <p>적용 분야를 소개하는 공간입니다.<br>실제 사업 영역에 맞게 직접 수정해 주세요.</p>
+        </div>
+        <div class="markets" id="marketList"></div>
+      </div>
+    </section>
+    <section id="contact" class="contactband">
+      <div class="wrap contactgrid">
+        <div>
+          <p class="eyebrow">LET’S WORK TOGETHER</p>
+          <h2 data-text="contactHeading"></h2>
+          <p data-text="contactText"></p><button class="cta" id="inquiry">문의 방법 확인</button>
+        </div>
+        <div class="contactinfo" id="contact-info">
+          <div class="inforow"><span>대표전화</span><strong data-text="phone"></strong></div>
+          <div class="inforow"><span>이메일</span><strong data-text="email"></strong></div>
+          <div class="inforow"><span>주소</span><strong data-text="address"></strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="footerrow"><strong data-text="company"></strong><span>© <span id="year"></span> SEOWON C&amp;C. All
+          rights reserved.</span><a href="http://www.s-one.co.kr/" target="_blank" rel="noopener">기존 홈페이지</a></div>
+      <div class="footnote">검토용 초안 · 회사 소개와 제품·적용 분야는 제안 문구입니다. 실제 사양·인증·공급 범위는 확인 후 반영해 주세요.<br>일러스트는 제품 실물이 아닌 디자인용
+        이미지입니다.</div>
+    </div>
+  </footer>
+  <dialog id="detail"><button class="close" id="closeDetail">닫기</button>
+    <p class="eyebrow" id="detailLabel"></p>
+    <h2 id="detailTitle"></h2>
+    <p id="detailText"></p><button class="cta" id="detailContact">문의 정보 보기</button>
+  </dialog>
+  <script id="initialData" type="application/json">
+{
+  "company": "서원씨앤씨",
+  "eyebrow": "Plastic Piping Systems for Marine, \nOffshore and Industrial Applications",
+  "headline": "S-ONE C&C CORP",
+  "intro": "현장의 요구에서 시작되는 더 나은 솔루션.\n서원씨앤씨와 함께 다음을 준비하세요.",
+  "productHeading": "현장을 위한 제품 솔루션",
+  "aboutHeading": "기술의 가치를,\n현장의 가능성으로.",
+  "aboutText": "서원씨앤씨는 1999년 설립된 선박 거주구용 플라스틱 배관 시스템 전문기업입니다. PPR, PVC, C-PVC, PB, PE, PVDF 등 다양한 배관과 부속품을 공급하며, 설계부터 제작·설치까지 통합 턴키 솔루션을 제공합니다. 국내를 비롯해 일본, 중국, 두바이 등 해외 시장에서도 고객의 신뢰와 만족을 위해 노력하고 있습니다.",
+  "contactHeading": "함께, 더 나은 답을 찾습니다.",
+  "contactText": "궁금하신 점이나 상담이 필요하시면 문의하세요.\n상담 가능 시간: 평일 08:00 ~ 18:00 (주 5일 운영)",
+  "phone": "055-363-2601",
+  "email": "s-one@s-one.co.kr",
+  "address": "경상남도 양산시 평산남3길 1 (주)서원씨앤씨",
+  "accent": "#2458a6",
+  "heroImage": "./image/main.jpg",
+  "aboutImage": "./image/about.jpg",
+  "products": [
+    {
+      "name": "배관 시스템",
+      "en": "PIPING SYSTEMS",
+      "category": "piping",
+      "text": "사용 환경에 맞는 배관 제품과 연결 솔루션을 소개합니다.",
+      "detail": "제품 소개 예시입니다. 실제 취급 소재, 규격, 사용 온도, 적용 기준 및 공급 범위를 입력해 주세요.",
+      "image": "./image/vedatzorluer-pipe-986318_1920.jpg"
+    },
+    {
+      "name": "가공 제품 · 부품",
+      "en": "CUSTOMIZED PARTS",
+      "category": "parts",
+      "text": "현장의 도면과 요구 사항에 맞춘 제품을 소개합니다.",
+      "detail": "가공 제품 소개 예시입니다. 가공 가능 소재, 치수 범위, 도면 검토 및 납기 안내를 입력해 주세요.",
+      "image": "./image/pexels-742233999-18540321.jpg"
+    },
+    {
+      "name": "기술 상담 · 지원",
+      "en": "TECHNICAL SUPPORT",
+      "category": "support",
+      "text": "제품 선정부터 적용 검토까지 필요한 정보를 안내합니다.",
+      "detail": "기술 지원 소개 예시입니다. 제공 가능한 상담 범위와 필요한 자료, 담당 부서 연락처를 입력해 주세요.",
+      "image": "./image/pexels-lezginepik-5476051.jpg"
+    }
+  ],
+  "markets": [
+    {
+      "title": "산업 설비",
+      "text": "다양한 산업 현장에서 활용되는 제품과 적용 사례를 소개해 주세요."
+    },
+    {
+      "title": "에너지 · 인프라",
+      "text": "설비 및 인프라 관련 사업 영역과 공급 가능한 솔루션을 소개해 주세요."
+    },
+    {
+      "title": "맞춤형 프로젝트",
+      "text": "고객의 요구 조건에 맞춰 진행한 프로젝트와 협업 방식을 소개해 주세요."
+    }
+  ]
+}
+</script>
+  <script>
+    const base = JSON.parse(document.getElementById('initialData').textContent);
+    let state = structuredClone(base), filter = 'all';
+    const $ = id => document.getElementById(id);
+    function art(variant = 0) {
+      const colors = variant === 3 ? ['#142d50', '#355e8a', '#7799c3'] : ['#b4c7e0', '#dce5f2', '#7093bf']; let pipes = ''; for (let i = 0; i < 6; i++) { let x = 130 + (i % 3) * 180, y = 160 + Math.floor(i / 3) * 190; pipes += '<g transform="translate(' + x + ' ' + y + ')"><path d="M0 0 L250 -160 L340 -160 L90 0 Z" fill="url(#metal)"/><ellipse cx="45" cy="0" rx="64" ry="72" fill="' + colors[2] + '"/><ellipse cx="45" cy="0" rx="49" ry="56" fill="#1b3a64"/><ellipse cx="49" cy="5" rx="40" ry="47" fill="#102746"/><path d="M-13 -29 Q-20 25 11 56" fill="none" stroke="#e2edfc" stroke-width="5" opacity=".55"/></g>' }
+      let svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 650"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="' + colors[1] + '"/><stop offset="1" stop-color="' + colors[0] + '"/></linearGradient><linearGradient id="metal" x1="0" y1="1" x2=".8" y2="0"><stop stop-color="' + colors[2] + '"/><stop offset=".28" stop-color="#d5e2f5"/><stop offset=".5" stop-color="#92b2dc"/><stop offset="1" stop-color="#456c9e"/></linearGradient><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity=".19"/></pattern></defs><rect width="850" height="650" fill="url(#bg)"/><rect width="850" height="650" fill="url(#grid)"/><g transform="translate(' + (variant === 1 ? -30 : 90) + ' ' + (variant === 2 ? 180 : 100) + ') rotate(-12 400 300)">' + pipes + '</g><path d="M20 610H830M800 20V630" stroke="#fff" stroke-opacity=".3" fill="none"/></svg>';
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg)
+    }
+    function validImage(v) { return typeof v === 'string' && (/^data:image\/(png|jpeg|webp|gif);base64,/.test(v) || /^https?:\/\//.test(v) || /^(?:\.\/)?(?:[\w-]+\/)*[\w.-]+\.(?:png|jpe?g|webp|gif|avif)$/i.test(v)) }
+    function getImage(v, fallback) { return validImage(v) ? v : art(fallback) }
+    function render() { document.documentElement.style.setProperty('--accent', /^#[0-9a-f]{6}$/i.test(state.accent) ? state.accent : base.accent); document.querySelectorAll('[data-text]').forEach(el => el.textContent = state[el.dataset.text]); $('heroImage').src = getImage(state.heroImage, 0); $('aboutImage').src = getImage(state.aboutImage, 3); $('productList').replaceChildren(); state.products.forEach((p, i) => { if (filter !== 'all' && p.category !== filter) return; const b = document.createElement('button'); b.className = 'product'; b.setAttribute('aria-label', p.name + ' 상세 보기'); const img = document.createElement('img'); img.src = getImage(p.image, i); img.alt = p.image ? p.name : '제품 컨셉 일러스트'; const body = document.createElement('div'); body.className = 'body';[['p', 'type', p.en], ['h3', '', p.name], ['p', '', p.text], ['span', 'more', '자세히 보기 +']].forEach(([tag, cls, t]) => { let el = document.createElement(tag); el.className = cls; el.textContent = t; body.append(el) }); b.append(img, body); b.onclick = () => openDetail(p.en, p.name, p.detail + '\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.'); $('productList').append(b) }); $('marketList').replaceChildren(); state.markets.forEach((m, i) => { const box = document.createElement('article'); box.className = 'market'; box.id = 'market-' + (i + 1); const sym = document.createElement('div'); sym.className = 'symbol'; sym.setAttribute('aria-hidden', 'true'); sym.textContent = ['▦', '◈', '⌘'][i]; const h = document.createElement('h3'); h.textContent = m.title; const p = document.createElement('p'); p.textContent = m.text; box.append(sym, h, p); $('marketList').append(box) }); $('year').textContent = new Date().getFullYear() }
+    function openDetail(label, title, txt) { $('detailLabel').textContent = label; $('detailTitle').textContent = title; $('detailText').textContent = txt; $('detail').showModal() }
+    $('closeDetail').onclick = () => $('detail').close(); $('detailContact').onclick = () => { $('detail').close(); location.hash = 'contact' }; $('inquiry').onclick = () => openDetail('CONTACT', '문의 안내', '대표전화: ' + state.phone + '\n이메일: ' + state.email + '\n주소: ' + state.address + '\n\n이 초안은 온라인 문의를 전송하지 않습니다. 실제 연락처를 입력한 후 해당 연락처로 문의해 주세요.');
+    document.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { filter = b.dataset.filter; document.querySelectorAll('[data-filter]').forEach(x => { x.classList.toggle('active', x === b); x.setAttribute('aria-pressed', String(x === b)) }); render() });
+
+    /* 메뉴 열기·닫기: 클릭, 키보드, 모바일 지원 */
+    const navigation = $('nav');
+    const mobileMenu = document.querySelector('.menu');
+    const menuTriggers = [...navigation.querySelectorAll('.nav-trigger')];
+    function closeSubmenus(except = null) {
+      menuTriggers.forEach(button => {
+        if (button === except) return;
+        button.setAttribute('aria-expanded', 'false');
+        $(button.getAttribute('aria-controls')).hidden = true;
+      });
+    }
+    function closeNavigation() {
+      closeSubmenus();
+      navigation.classList.remove('open');
+      mobileMenu.setAttribute('aria-expanded', 'false');
+    }
+    function toggleSubmenu(button, forceOpen) {
+      const open = forceOpen ?? button.getAttribute('aria-expanded') !== 'true';
+      closeSubmenus(button);
+      button.setAttribute('aria-expanded', String(open));
+      $(button.getAttribute('aria-controls')).hidden = !open;
+    }
+    menuTriggers.forEach(button => {
+      const group = button.closest('.nav-group');
+      const hoverMenu = matchMedia('(hover: hover) and (pointer: fine) and (min-width:721px)');
+      group.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'mouse' && hoverMenu.matches) toggleSubmenu(button, true);
+      });
+      group.addEventListener('pointerleave', event => {
+        if (event.pointerType === 'mouse' && hoverMenu.matches && !group.contains(document.activeElement)) {
+          button.setAttribute('aria-expanded', 'false');
+          $(button.getAttribute('aria-controls')).hidden = true;
+        }
+      });
+      button.onclick = event => toggleSubmenu(button, hoverMenu.matches && event.detail > 0 ? true : undefined);
+      button.onkeydown = event => {
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          toggleSubmenu(button, true);
+          $(button.getAttribute('aria-controls')).querySelector('a').focus();
+        }
+      };
+    });
+    mobileMenu.onclick = () => {
+      const open = !navigation.classList.contains('open');
+      closeSubmenus();
+      navigation.classList.toggle('open', open);
+      mobileMenu.setAttribute('aria-expanded', String(open));
+    };
+    navigation.querySelectorAll('a').forEach(link => {
+      link.onclick = event => {
+        const category = link.dataset.productFilter;
+        if (category) {
+          document.querySelector('[data-filter="' + category + '"]').click();
+        }
+        const target = document.querySelector(link.getAttribute('href'));
+        closeNavigation();
+        if (target) {
+          event.preventDefault();
+          history.replaceState(null, '', link.getAttribute('href'));
+          target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      };
+    });
+    document.addEventListener('click', event => {
+      if (!navigation.contains(event.target) && !mobileMenu.contains(event.target)) closeNavigation();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const active = menuTriggers.find(button => button.getAttribute('aria-expanded') === 'true');
+      if (active) { closeSubmenus(); active.focus(); }
+      else if (navigation.classList.contains('open')) { closeNavigation(); mobileMenu.focus(); }
+    });
+    navigation.addEventListener('focusout', () => {
+      setTimeout(() => { if (!navigation.contains(document.activeElement)) closeSubmenus(); }, 0);
+    });
+    matchMedia('(max-width:720px)').addEventListener('change', closeNavigation);
+    render();
+  </script>
+</body>
+
+</html>
