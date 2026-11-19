@@ -8,7 +8,29 @@
     }
     function validImage(v) { return typeof v === 'string' && (/^data:image\/(png|jpeg|webp|gif);base64,/.test(v) || /^https?:\/\//.test(v) || /^(?:\.\/)?(?:[\w-]+\/)*[\w.-]+\.(?:png|jpe?g|webp|gif|avif)$/i.test(v)) }
     function getImage(v, fallback) { return validImage(v) ? v : art(fallback) }
-    function render() { document.documentElement.style.setProperty('--accent', /^#[0-9a-f]{6}$/i.test(state.accent) ? state.accent : base.accent); document.querySelectorAll('[data-text]').forEach(el => el.textContent = state[el.dataset.text]); $('heroImage').src = getImage(state.heroImage, 0); $('aboutImage').src = getImage(state.aboutImage, 3); $('productList').replaceChildren(); state.products.forEach((p, i) => { if (filter !== 'all' && p.category !== filter) return; const b = document.createElement('button'); b.className = 'product'; b.setAttribute('aria-label', p.name + ' 상세 보기'); const img = document.createElement('img'); img.src = getImage(p.image, i); img.alt = p.image ? p.name : '제품 컨셉 일러스트'; const body = document.createElement('div'); body.className = 'body';[['p', 'type', p.en], ['h3', '', p.name], ['p', '', p.text], ['span', 'more', '자세히 보기 +']].forEach(([tag, cls, t]) => { let el = document.createElement(tag); el.className = cls; el.textContent = t; body.append(el) }); b.append(img, body); b.onclick = () => openDetail(p.en, p.name, p.detail + '\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.'); $('productList').append(b) }); $('marketList').replaceChildren(); state.markets.forEach((m, i) => { const box = document.createElement('article'); box.className = 'market'; box.id = 'market-' + (i + 1); const sym = document.createElement('div'); sym.className = 'symbol'; sym.setAttribute('aria-hidden', 'true'); sym.textContent = ['▦', '◈', '⌘'][i]; const h = document.createElement('h3'); h.textContent = m.title; const p = document.createElement('p'); p.textContent = m.text; box.append(sym, h, p); $('marketList').append(box) }); $('year').textContent = new Date().getFullYear() }
+    function render() { document.documentElement.style.setProperty('--accent', /^#[0-9a-f]{6}$/i.test(state.accent) ? state.accent : base.accent); document.querySelectorAll('[data-text]').forEach(el => el.textContent = state[el.dataset.text]); $('heroImage').src = getImage(state.heroImage, 0); $('aboutImage').src = getImage(state.aboutImage, 3); $('productList').replaceChildren(); state.products.forEach((p, i) => { if (filter !== 'all' && p.category !== filter) return; const b = document.createElement('button'); b.className = 'product'; b.setAttribute('aria-label', p.name + ' 상세 보기'); const img = document.createElement('img'); img.src = getImage(p.image, i); img.alt = p.image ? p.name : '제품 컨셉 일러스트'; const body = document.createElement('div'); body.className = 'body';[['p', 'type', p.en], ['h3', '', p.name], ['p', '', p.text], ['span', 'more', '자세히 보기 +']].forEach(([tag, cls, t]) => { let el = document.createElement(tag); el.className = cls; el.textContent = t; body.append(el) }); b.append(img, body); b.onclick = () => openDetail(p.en, p.name, p.detail + '\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.'); $('productList').append(b) }); $('marketList').replaceChildren(); state.markets.forEach((m, i) => {
+      const card = document.createElement('article');
+      card.className = 'market';
+      card.id = 'market-' + (i + 1);
+      const img = document.createElement('img');
+      img.className = 'market-image';
+      img.src = getImage(m.image, i);
+      img.alt = m.imageAlt || m.title + ' 적용 분야 이미지';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      const content = document.createElement('div');
+      content.className = 'market-content';
+      const kicker = document.createElement('span');
+      kicker.className = 'market-kicker';
+      kicker.textContent = m.en || 'APPLICATION';
+      const heading = document.createElement('h3');
+      heading.textContent = m.title;
+      const description = document.createElement('p');
+      description.textContent = m.text;
+      content.append(kicker, heading, description);
+      card.append(img, content);
+      $('marketList').append(card);
+    }); $('year').textContent = new Date().getFullYear() }
     function openDetail(label, title, txt) { $('detailLabel').textContent = label; $('detailTitle').textContent = title; $('detailText').textContent = txt; $('detail').showModal() }
     $('closeDetail').onclick = () => $('detail').close(); $('detailContact').onclick = () => { $('detail').close(); location.hash = 'contact' }; $('inquiry').onclick = () => openDetail('CONTACT', '문의 안내', '대표전화: ' + state.phone + '\n이메일: ' + state.email + '\n주소: ' + state.address + '\n\n이 초안은 온라인 문의를 전송하지 않습니다. 실제 연락처를 입력한 후 해당 연락처로 문의해 주세요.');
     document.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { filter = b.dataset.filter; document.querySelectorAll('[data-filter]').forEach(x => { x.classList.toggle('active', x === b); x.setAttribute('aria-pressed', String(x === b)) }); render() });
