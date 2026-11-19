@@ -44,15 +44,24 @@ window.SONE_SITE_DATA = {
   "markets": [
     {
       "title": "산업 설비",
-      "text": "다양한 산업 현장에서 활용되는 제품과 적용 사례를 소개해 주세요."
+      "en": "INDUSTRIAL SYSTEMS",
+      "text": "산업 현장의 유체 이송과 배관 연결에 필요한 솔루션을 소개합니다.",
+      "image": "./image/vedatzorluer-pipe-986318_1920.jpg",
+      "imageAlt": "산업용 배관 이미지"
     },
     {
       "title": "에너지 · 인프라",
-      "text": "설비 및 인프라 관련 사업 영역과 공급 가능한 솔루션을 소개해 주세요."
+      "en": "ENERGY & INFRASTRUCTURE",
+      "text": "에너지 및 인프라 설비에 적용되는 배관 시스템의 가능성을 살펴보세요.",
+      "image": "./image/pexels-lezginepik-5476051.jpg",
+      "imageAlt": "산업 설비 배관 이미지"
     },
     {
       "title": "맞춤형 프로젝트",
-      "text": "고객의 요구 조건에 맞춰 진행한 프로젝트와 협업 방식을 소개해 주세요."
+      "en": "CUSTOMIZED PROJECTS",
+      "text": "현장 조건과 요구 사항에 맞춘 가공 부품 및 프로젝트 대응 분야를 소개합니다.",
+      "image": "./image/pexels-742233999-18540321.jpg",
+      "imageAlt": "가공 및 프로젝트 관련 이미지"
     }
   ]
 };
