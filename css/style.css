@@ -1099,3 +1099,32 @@
 @media (max-width: 1000px) { #markets .markets { grid-template-columns: repeat(2, minmax(0, 1fr)); } #markets .market { min-height: 400px; } }
 @media (max-width: 720px) { #markets .markets { grid-template-columns: minmax(0, 1fr); gap: 18px; } #markets .market { min-height: 0; aspect-ratio: 1 / 1; } #markets .market-content { padding: 28px 24px; } #markets .market h3 { font-size: 29px; } }
 @media (prefers-reduced-motion: reduce) { #markets .market-image { transition: none; } }
+
+/* APPLICATIONS v2 — bold photographic editorial panels */
+#markets { background: #f5f7fb; }
+#markets .heading { align-items: end; margin-bottom: 40px; }
+#markets .heading h2 { font-size: clamp(30px, 3vw, 44px); }
+#markets .markets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+#markets .market { min-height: 520px; border-radius: 3px; box-shadow: 0 14px 35px rgba(20,40,65,.08); }
+#markets .market-image { object-position: center; filter: saturate(.9) contrast(1.06); }
+#markets .market::after { background: linear-gradient(180deg, rgba(8,23,45,.12) 0%, rgba(8,23,45,.10) 32%, rgba(8,23,45,.65) 69%, rgba(8,23,45,.95) 100%); }
+#markets .market::before { content: "0" counter(application); counter-increment: application; position: absolute; top: 24px; left: 28px; z-index: 1; color: rgba(255,255,255,.8); font-size: 13px; letter-spacing: .18em; font-weight: 700; border-top: 2px solid #fff; padding-top: 10px; }
+#markets .markets { counter-reset: application; }
+#markets .market-content { padding: 42px 32px; }
+#markets .market-kicker { font-size: 12px; letter-spacing: .15em; font-weight: 700; color: #bcd8ff; margin-bottom: 10px; }
+#markets .market h3 { font-size: clamp(30px, 2.8vw, 42px); line-height: 1.2; font-weight: 800; margin-bottom: 16px; text-shadow: 0 2px 12px rgba(0,0,0,.15); }
+#markets .market p { max-width: 34ch; font-size: 15px; line-height: 1.8; color: #eaf1f9; }
+#markets .market-content::after { content: ""; display: block; width: 45px; height: 3px; margin-top: 25px; background: #7fb0f3; }
+@media (max-width: 1100px) and (min-width: 721px) {
+  #markets .markets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #markets .market { min-height: 450px; }
+}
+@media (max-width: 720px) {
+  #markets .heading { margin-bottom: 24px; }
+  #markets .markets { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  #markets .market { aspect-ratio: auto; min-height: 420px; border-radius: 0; }
+  #markets .market-content { padding: 34px 26px; }
+  #markets .market h3 { font-size: clamp(32px, 8vw, 42px); }
+  #markets .market p { font-size: 14px; }
+  #markets .market::before { top: 20px; left: 26px; }
+}
