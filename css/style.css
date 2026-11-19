@@ -1084,3 +1084,18 @@
   .hero .heroart { inset: 0; width: 100%; height: 100%; object-position: 62% center; }
   .hero .heroshade { background: linear-gradient(90deg, rgba(10,29,55,.78), rgba(10,29,55,.35)); }
 }
+
+/* APPLICATIONS: image-led editorial cards inspired by industrial product galleries. */
+#markets .heading { margin-bottom: 32px; }
+#markets .markets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; border: 0; background: transparent; }
+#markets .market { position: relative; isolation: isolate; min-height: 430px; padding: 0; overflow: hidden; background: #163453; color: #fff; }
+#markets .market-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+#markets .market::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(9,24,42,.08) 12%, rgba(9,24,42,.25) 45%, rgba(9,24,42,.88) 100%); }
+#markets .market-content { position: absolute; z-index: 1; inset: auto 0 0; padding: 34px 30px; }
+#markets .market-kicker { display: block; margin-bottom: 12px; font-size: 12px; font-weight: 700; letter-spacing: .18em; color: #d4e8ff; }
+#markets .market h3 { margin: 0 0 12px; color: #fff; font-size: clamp(24px, 2.4vw, 32px); letter-spacing: -.04em; }
+#markets .market p { margin: 0; max-width: 32ch; color: #f0f5fa; font-size: 14px; line-height: 1.75; word-break: keep-all; }
+#markets .market:hover .market-image { transform: scale(1.045); }
+@media (max-width: 1000px) { #markets .markets { grid-template-columns: repeat(2, minmax(0, 1fr)); } #markets .market { min-height: 400px; } }
+@media (max-width: 720px) { #markets .markets { grid-template-columns: minmax(0, 1fr); gap: 18px; } #markets .market { min-height: 0; aspect-ratio: 1 / 1; } #markets .market-content { padding: 28px 24px; } #markets .market h3 { font-size: 29px; } }
+@media (prefers-reduced-motion: reduce) { #markets .market-image { transition: none; } }
