@@ -1,4 +1,3 @@
-/* Site content — extracted from the original inline JSON without changing values. */
 window.SONE_SITE_DATA = {
   "company": "서원씨앤씨",
   "eyebrow": "Plastic Piping Systems for Marine, \nOffshore and Industrial Applications",
@@ -46,22 +45,22 @@ window.SONE_SITE_DATA = {
       "title": "산업 설비",
       "en": "INDUSTRIAL SYSTEMS",
       "text": "산업 현장의 유체 이송과 배관 연결에 필요한 솔루션을 소개합니다.",
-      "image": "./image/vedatzorluer-pipe-986318_1920.jpg",
-      "imageAlt": "산업용 배관 이미지"
+      "image": "https://images.unsplash.com/photo-1769695832195-dfe7e9f36980?auto=format&fit=crop&w=1200&q=82",
+      "imageAlt": "산업용 배관과 밸브가 설치된 설비 사진"
     },
     {
       "title": "에너지 · 인프라",
       "en": "ENERGY & INFRASTRUCTURE",
       "text": "에너지 및 인프라 설비에 적용되는 배관 시스템의 가능성을 살펴보세요.",
-      "image": "./image/pexels-lezginepik-5476051.jpg",
-      "imageAlt": "산업 설비 배관 이미지"
+      "image": "https://images.unsplash.com/photo-1780752849375-fd8df4632dae?auto=format&fit=crop&w=1200&q=82",
+      "imageAlt": "대규모 산업 플랜트 및 인프라 전경"
     },
     {
       "title": "맞춤형 프로젝트",
       "en": "CUSTOMIZED PROJECTS",
       "text": "현장 조건과 요구 사항에 맞춘 가공 부품 및 프로젝트 대응 분야를 소개합니다.",
-      "image": "./image/pexels-742233999-18540321.jpg",
-      "imageAlt": "가공 및 프로젝트 관련 이미지"
+      "image": "https://images.unsplash.com/photo-1773517459133-be9768f6cac9?auto=format&fit=crop&w=1200&q=82",
+      "imageAlt": "산업 배관과 설비의 상세 사진"
     }
   ]
 };
