@@ -3,9 +3,9 @@
 // https://ntmsmdh828-pixel.github.io as a Web service URL.
 // Verify exact coordinates for 경상남도 양산시 평산남3길 1 before publishing a pin.
 window.SONE_NAVER_MAP_CONFIG = {
-  clientId: "",
-  latitude: null,
-  longitude: null,
+  clientId: "dbf5mg5xir",
+  latitude: 35.37877112,
+  longitude: 129.15190755,
   zoom: 16,
   name: "(주)서원씨앤씨"
 };
