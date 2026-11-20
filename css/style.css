@@ -1174,3 +1174,16 @@
 .hero-controls button:disabled { opacity:.3;cursor:not-allowed; }
 @media(max-width:720px) { .hero-controls { right:20px;bottom:67px;gap:5px; } .hero-controls button { min-width:31px;height:31px;font-size:11px; } }
 @media(prefers-reduced-motion:reduce) { .hero .hero-slides .hero-slide { transition:none; } .hero .hero-slides .hero-slide.is-active { animation:none; } }
+
+/* Icon + caption beneath the hero photography; text remains editable HTML. */
+.hero-feature { position:absolute;z-index:3;left:max(36px,calc((100vw - 1200px)/2));bottom:78px;display:flex;align-items:center;gap:18px;max-width:min(560px,60vw);padding:20px 28px 21px 22px;background:linear-gradient(90deg,rgba(6,30,66,.92),rgba(8,43,82,.78));border-left:3px solid #a8d1ff;color:#fff;box-shadow:0 16px 40px rgba(3,16,36,.18); }
+.hero-feature-icon { width:58px;height:58px;display:grid;place-items:center;flex-shrink:0; }
+.hero-feature-icon svg { width:52px;height:52px; }
+.hero-feature .hero-icon { display:none; }
+.hero-feature[data-slide="0"] .hero-icon-0,.hero-feature[data-slide="1"] .hero-icon-1,.hero-feature[data-slide="2"] .hero-icon-2 { display:block; }
+.hero-feature-copy { display:flex;flex-direction:column;gap:4px;min-width:0; }
+.hero-feature-copy strong { font-size:clamp(20px,2.2vw,30px);font-weight:800;line-height:1.2;letter-spacing:-.04em; }
+.hero-feature-copy span { font-size:14px;color:#eaf3ff;line-height:1.5;word-break:keep-all; }
+.hero-feature-copy small { margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.12em;color:#badbff; }
+@media(max-width:900px){.hero-feature{left:26px;bottom:112px;max-width:calc(100% - 52px);padding:15px 18px;gap:12px}.hero-feature-icon{width:45px;height:45px}.hero-feature-icon svg{width:42px;height:42px}.hero-controls{bottom:65px}}
+@media(max-width:720px){.hero-feature{left:18px;right:18px;bottom:112px;max-width:none;padding:13px 15px;gap:11px}.hero-feature-copy strong{font-size:20px}.hero-feature-copy span{font-size:12px}.hero-feature-copy small{font-size:9px}.hero-feature-icon{width:39px;height:39px}.hero-feature-icon svg{width:37px;height:37px}.hero-controls{bottom:67px}}

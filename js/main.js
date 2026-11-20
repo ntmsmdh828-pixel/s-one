@@ -137,9 +137,23 @@
         dots[i].disabled = true;
         img.src = sources[i];
       });
+      const feature = hero.querySelector('.hero-feature');
+      const featureTitles = [
+        ['S-ONE C&C', '산업용 플라스틱 배관 전문기업', 'ENGINEERED FLOW SOLUTIONS'],
+        ['선박 배관 시스템', '선박·해양 플라스틱 배관 솔루션', 'MARINE PIPING SYSTEM'],
+        ['산업·전력설비 배관', '산업설비 냉각수 및 유틸리티 배관', 'INDUSTRIAL PIPING SYSTEM']
+      ];
+      function updateFeature(index) {
+        const [title, subtitle, english] = featureTitles[index];
+        hero.querySelector('#heroFeatureTitle').textContent = title;
+        hero.querySelector('#heroFeatureSubtitle').textContent = subtitle;
+        hero.querySelector('#heroFeatureEnglish').textContent = english;
+        feature.dataset.slide = String(index);
+      }
       function show(index) {
         if (!available[index]) return;
         current = index;
+        updateFeature(index);
         slides.forEach((img, i) => img.classList.toggle('is-active', i === current));
         dots.forEach((dot, i) => {
           dot.classList.toggle('is-active', i === current);
@@ -169,5 +183,6 @@
       pauseButton.addEventListener('click', () => { paused = !paused; updatePause(); });
       document.addEventListener('visibilitychange', start);
       reducedMotion.addEventListener('change', () => { paused = reducedMotion.matches; updatePause(); });
+      updateFeature(0);
       updatePause();
     })();
