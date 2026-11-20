@@ -8,7 +8,7 @@
     }
     function validImage(v) { return typeof v === 'string' && (/^data:image\/(png|jpeg|webp|gif);base64,/.test(v) || /^https?:\/\//.test(v) || /^(?:\.\/)?(?:[\w-]+\/)*[\w.-]+\.(?:png|jpe?g|webp|gif|avif)$/i.test(v)) }
     function getImage(v, fallback) { return validImage(v) ? v : art(fallback) }
-    function render() { document.documentElement.style.setProperty('--accent', /^#[0-9a-f]{6}$/i.test(state.accent) ? state.accent : base.accent); document.querySelectorAll('[data-text]').forEach(el => el.textContent = state[el.dataset.text]); $('heroImage').src = getImage(state.heroImage, 0); $('aboutImage').src = getImage(state.aboutImage, 3); $('productList').replaceChildren(); state.products.forEach((p, i) => { if (filter !== 'all' && p.category !== filter) return; const b = document.createElement('button'); b.className = 'product'; b.setAttribute('aria-label', p.name + ' 상세 보기'); const img = document.createElement('img'); img.src = getImage(p.image, i); img.alt = p.image ? p.name : '제품 컨셉 일러스트'; const body = document.createElement('div'); body.className = 'body';[['p', 'type', p.en], ['h3', '', p.name], ['p', '', p.text], ['span', 'more', '자세히 보기 +']].forEach(([tag, cls, t]) => { let el = document.createElement(tag); el.className = cls; el.textContent = t; body.append(el) }); b.append(img, body); b.onclick = () => openDetail(p.en, p.name, p.detail + '\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.'); $('productList').append(b) }); $('marketList').replaceChildren(); state.markets.forEach((m, i) => {
+    function render() { document.documentElement.style.setProperty('--accent', /^#[0-9a-f]{6}$/i.test(state.accent) ? state.accent : base.accent); document.querySelectorAll('[data-text]').forEach(el => el.textContent = state[el.dataset.text]); $('heroImage').src = getImage(state.heroImage, 0); $('aboutImage').src = getImage(state.aboutImage, 3); $('productList').replaceChildren(); state.products.forEach((p, i) => { if (filter !== 'all' && p.category !== filter) return; const b = document.createElement('button'); b.className = 'product'; b.setAttribute('aria-label', p.name + ' 상세 보기'); const img = document.createElement('img'); img.src = getImage(p.image, i); img.alt = p.image ? p.name : '제품 컨셉 일러스트'; const body = document.createElement('div'); body.className = 'body';[['p', 'type', p.en], ['h3', '', p.name], ['p', '', p.text], ['span', 'more', '자세히 보기 +']].forEach(([tag, cls, t]) => { let el = document.createElement(tag); el.className = cls; el.textContent = t; body.append(el) }); b.append(img, body); b.onclick = () => { if (p.manufacturers) openPprDetail(p); else openDetail(p.en, p.name, p.detail + '\n\n※ 초안 예시 내용입니다. 실제 제품 정보 확인 후 수정해 주세요.'); }; $('productList').append(b) }); $('marketList').replaceChildren(); state.markets.forEach((m, i) => {
       const card = document.createElement('article');
       card.className = 'market';
       card.id = 'market-' + (i + 1);
@@ -31,7 +31,56 @@
       card.append(img, content);
       $('marketList').append(card);
     }); $('year').textContent = new Date().getFullYear() }
-    function openDetail(label, title, txt) { $('detailLabel').textContent = label; $('detailTitle').textContent = title; $('detailText').textContent = txt; $('detail').showModal() }
+    function openDetail(label, title, txt) { $('pprSpecs').hidden = true; $('detailLabel').textContent = label; $('detailTitle').textContent = title; $('detailText').textContent = txt; $('detail').showModal() }
+    function openPprDetail(product) {
+      $('detailLabel').textContent = product.en;
+      $('detailTitle').textContent = product.name + ' · 제조사별 사양';
+      $('detailText').textContent = '아래 제조사를 선택하면 제품군별 주요 정보를 확인할 수 있습니다.';
+      $('pprSpecs').hidden = false;
+      const tabs = $('pprTabs');
+      const content = $('pprSpecContent');
+      tabs.replaceChildren();
+      const buttons = product.manufacturers.map((maker, i) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'ppr-tab';
+        button.id = 'ppr-tab-' + maker.id;
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-controls', 'pprSpecContent');
+        button.textContent = maker.name;
+        button.addEventListener('click', () => select(i));
+        button.addEventListener('keydown', e => {
+          if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+          e.preventDefault();
+          const next = (i + (e.key === 'ArrowRight' ? 1 : -1) + product.manufacturers.length) % product.manufacturers.length;
+          select(next); buttons[next].focus();
+        });
+        tabs.append(button);
+        return button;
+      });
+      function select(i) {
+        const maker = product.manufacturers[i];
+        buttons.forEach((button, j) => {
+          button.setAttribute('aria-selected', String(i === j));
+          button.tabIndex = i === j ? 0 : -1;
+        });
+        content.setAttribute('aria-labelledby', buttons[i].id);
+        content.replaceChildren();
+        const title = document.createElement('h3'); title.textContent = maker.name + ' · ' + maker.series;
+        const table = document.createElement('dl'); table.className = 'ppr-spec-table';
+        maker.rows.forEach(([name, value]) => {
+          const dt = document.createElement('dt'); dt.textContent = name;
+          const dd = document.createElement('dd'); dd.textContent = value;
+          table.append(dt, dd);
+        });
+        const link = document.createElement('a');
+        link.href = maker.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.className = 'ppr-spec-source'; link.textContent = '제조사·승인 자료 확인 ↗';
+        content.append(title, table, link);
+      }
+      select(0);
+      $('detail').showModal();
+    }
     $('closeDetail').onclick = () => $('detail').close(); $('detailContact').onclick = () => { $('detail').close(); location.hash = 'contact' }; $('inquiry').onclick = () => openDetail('CONTACT', '문의 안내', '대표전화: ' + state.phone + '\n이메일: ' + state.email + '\n주소: ' + state.address + '\n\n이 초안은 온라인 문의를 전송하지 않습니다. 실제 연락처를 입력한 후 해당 연락처로 문의해 주세요.');
     document.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { filter = b.dataset.filter; document.querySelectorAll('[data-filter]').forEach(x => { x.classList.toggle('active', x === b); x.setAttribute('aria-pressed', String(x === b)) }); render() });
 
