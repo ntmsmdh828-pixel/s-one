@@ -124,8 +124,8 @@
       const pauseButton = hero.querySelector('.hero-pause');
       const sources = [
         state.heroImage,
-        state.markets[0].image,
-        state.markets[1].image
+        'https://images.pexels.com/photos/16482911/pexels-photo-16482911.jpeg?auto=compress&cs=tinysrgb&w=1800',
+        'https://images.pexels.com/photos/36137497/pexels-photo-36137497.jpeg?auto=compress&cs=tinysrgb&w=1800'
       ];
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
       let current = 0, timer = null, paused = reducedMotion.matches;
