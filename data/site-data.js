@@ -21,7 +21,7 @@ window.SONE_SITE_DATA = {
       "category": "piping",
       "text": "사용 환경에 맞는 배관 제품과 연결 솔루션을 소개합니다.",
       "detail": "제품 소개 예시입니다. 실제 취급 소재, 규격, 사용 온도, 적용 기준 및 공급 범위를 입력해 주세요.",
-      "image": "./image/vedatzorluer-pipe-986318_1920.jpg"
+      "image": "https://images.pexels.com/photos/7937309/pexels-photo-7937309.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "name": "가공 제품 · 부품",
@@ -29,7 +29,7 @@ window.SONE_SITE_DATA = {
       "category": "parts",
       "text": "현장의 도면과 요구 사항에 맞춘 제품을 소개합니다.",
       "detail": "가공 제품 소개 예시입니다. 가공 가능 소재, 치수 범위, 도면 검토 및 납기 안내를 입력해 주세요.",
-      "image": "./image/pexels-742233999-18540321.jpg"
+      "image": "https://images.pexels.com/photos/38028968/pexels-photo-38028968.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "name": "기술 상담 · 지원",
@@ -37,7 +37,7 @@ window.SONE_SITE_DATA = {
       "category": "support",
       "text": "제품 선정부터 적용 검토까지 필요한 정보를 안내합니다.",
       "detail": "기술 지원 소개 예시입니다. 제공 가능한 상담 범위와 필요한 자료, 담당 부서 연락처를 입력해 주세요.",
-      "image": "./image/pexels-lezginepik-5476051.jpg"
+      "image": "https://images.pexels.com/photos/40786137/pexels-photo-40786137.jpeg?auto=compress&cs=tinysrgb&w=1200"
     }
   ],
   "markets": [
