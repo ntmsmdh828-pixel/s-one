@@ -115,3 +115,59 @@
     });
     matchMedia('(max-width:720px)').addEventListener('change', closeNavigation);
     render();
+
+    /* Hero slideshow: original main.jpg stays first, other existing site imagery follows. */
+    (function initHeroSlideshow() {
+      const hero = document.querySelector('.hero');
+      const slides = [...hero.querySelectorAll('.hero-slide')];
+      const dots = [...hero.querySelectorAll('.hero-dot')];
+      const pauseButton = hero.querySelector('.hero-pause');
+      const sources = [
+        state.heroImage,
+        state.markets[0].image,
+        state.markets[1].image
+      ];
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      let current = 0, timer = null, paused = reducedMotion.matches;
+      let available = [true, false, false];
+      slides.forEach((img, i) => {
+        if (i === 0) return; // The original hero is already rendered.
+        img.addEventListener('load', () => { available[i] = true; dots[i].disabled = false; });
+        img.addEventListener('error', () => { available[i] = false; dots[i].disabled = true; });
+        dots[i].disabled = true;
+        img.src = sources[i];
+      });
+      function show(index) {
+        if (!available[index]) return;
+        current = index;
+        slides.forEach((img, i) => img.classList.toggle('is-active', i === current));
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === current);
+          dot.setAttribute('aria-pressed', String(i === current));
+        });
+      }
+      function advance(direction) {
+        for (let step = 1; step <= slides.length; step++) {
+          const next = (current + direction * step + slides.length * 2) % slides.length;
+          if (available[next]) { show(next); break; }
+        }
+      }
+      function stop() { if (timer) clearInterval(timer); timer = null; }
+      function start() {
+        stop();
+        if (!paused && !document.hidden) timer = setInterval(() => advance(1), 6000);
+      }
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); start(); }));
+      hero.querySelector('.hero-prev').addEventListener('click', () => { advance(-1); start(); });
+      hero.querySelector('.hero-next').addEventListener('click', () => { advance(1); start(); });
+      function updatePause() {
+        pauseButton.textContent = paused ? '▶' : 'Ⅱ';
+        pauseButton.setAttribute('aria-pressed', String(paused));
+        pauseButton.setAttribute('aria-label', paused ? '자동 전환 재생' : '자동 전환 일시정지');
+        start();
+      }
+      pauseButton.addEventListener('click', () => { paused = !paused; updatePause(); });
+      document.addEventListener('visibilitychange', start);
+      reducedMotion.addEventListener('change', () => { paused = reducedMotion.matches; updatePause(); });
+      updatePause();
+    })();
