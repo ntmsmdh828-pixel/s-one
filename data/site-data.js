@@ -21,6 +21,23 @@ window.SONE_SITE_DATA = {
       "category": "piping",
       "text": "온수·냉수 등 용도에 맞는 PPR 배관 시스템",
       "detail": "PPR 배관 적용 조건 및 취급 규격은 상담을 통해 확인해 주세요.",
+      "manufacturers": [
+        {
+          "id": "aquatherm", "name": "Aquatherm", "series": "GREEN / BLUE",
+          "rows": [["재질", "PP-R / PP-RCT 계열 (세부 제품별 상이)"], ["GREEN 제품군", "급수·급탕 및 관련 배관"], ["BLUE 제품군", "냉각수·냉난방 등 설비 배관"], ["대표 SDR", "GREEN: 6 / 7.4 / 9 / 11 · BLUE: 7.4 / 9 / 11 / 17.6 (제품별 상이)"], ["외경", "제품 모델에 따라 상이 — 제조사 카탈로그 확인"], ["접합", "제품 사양에 따른 열융착 접합"]],
+          "url": "https://www.aquatherm.de/en/solutions-products/products/aquatherm-green/"
+        },
+        {
+          "id": "gf", "name": "GF", "series": "AQUASYSTEM",
+          "rows": [["재질", "PP-R / PP-RCT (제품 구조별 상이)"], ["제품 형태", "단층 및 섬유 강화 배관"], ["대표 SDR", "6 / 7.4 / 9 / 11 등 (제품별 상이)"], ["외경", "제품 모델에 따라 상이 — 제조사 카탈로그 확인"], ["주요 용도", "급수·급탕, 선박 및 산업 배관 (적용 조건 확인 필요)"], ["접합", "제품 사양에 따른 열융착 접합"]],
+          "url": "https://www.gfps.com/com/en/products-solutions/systems/aquasystem.html"
+        },
+        {
+          "id": "pnc", "name": "PNC TECH", "series": "Fiber Reinforced PP-R",
+          "rows": [["재질", "섬유 강화 PP-R"], ["확인된 형식승인 표기", "SDR 7.4 / S3.2 / PN16 (해당 승인 모델 기준)"], ["외경", "최신 제조사 규격표 확인 필요"], ["주요 용도", "선박용 배관 (선급 승인 범위 확인 필요)"], ["접합", "모델별 시공 지침 확인 필요"], ["인증", "선급 승인 여부·유효기간·적용 범위 별도 확인"]],
+          "url": "https://e-mesis.krs.co.kr/KeyService/TypeApproval/En/WKS_TypeApprovalCertInfo.aspx?crt_no=979ADB8A6CA4215FF24C5B8FB9A3739F3FD46BA151CC1808BBC57E7B710262D0"
+        }
+      ],
       "image": "https://images.pexels.com/photos/11851260/pexels-photo-11851260.jpeg?auto=compress&cs=tinysrgb&w=1100"
     },
     {
