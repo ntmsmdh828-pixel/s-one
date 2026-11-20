@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="서원씨앤씨 홈페이지 디자인 초안">
   <title>서원씨앤씨 | 산업을 잇는 더 나은 기술</title>
-  <link rel="stylesheet" href="./css/style.css?v=20261120-catalog">
+  <link rel="stylesheet" href="./css/style.css?v=20261120-map">
 </head>
 
 <body>
@@ -187,6 +187,12 @@
           <div class="inforow"><span>주소</span><strong data-text="address"></strong></div>
         </div>
       </div>
+      <div class="wrap contact-map-section" aria-labelledby="contact-map-title">
+        <div class="contact-map-heading"><div><p class="eyebrow">LOCATION</p><h3 id="contact-map-title">오시는 길</h3><p>경상남도 양산시 평산남3길 1 · (주)서원씨앤씨</p></div><a class="contact-map-link" href="https://map.naver.com/p/search/%EC%84%9C%EC%9B%90%EC%94%A8%EC%95%A4%EC%94%A8" target="_blank" rel="noopener noreferrer">네이버 지도에서 찾기 ↗</a></div>
+        <div id="soneNaverMap" class="contact-map-canvas" role="region" aria-label="서원씨앤씨 위치 지도">
+          <div class="contact-map-placeholder" id="soneMapStatus">네이버 지도 API 연결 준비 중입니다. 지도 이용 전 네이버 클라우드 Client ID와 회사 위치 좌표를 설정해 주세요.</div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
@@ -203,6 +209,8 @@
   </dialog>
   <script src="./data/site-data.js?v=20261120-photos2" defer></script>
   <script src="./js/main.js?v=20261120-2" defer></script>
+<script src="./js/naver-map-config.js?v=1" defer></script>
+  <script src="./js/naver-map.js?v=1" defer></script>
 </body>
 
 </html>
