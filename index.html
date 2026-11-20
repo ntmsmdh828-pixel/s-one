@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="서원씨앤씨 홈페이지 디자인 초안">
   <title>서원씨앤씨 | 산업을 잇는 더 나은 기술</title>
-  <link rel="stylesheet" href="./css/style.css?v=20261120-company">
+  <link rel="stylesheet" href="./css/style.css?v=20261120-hero">
 </head>
 
 <body>
@@ -58,13 +58,14 @@
     </div>
   </header>
   <main>
-    <section class="hero"><img class="heroart" id="heroImage" alt="서원씨앤씨 메인 이미지">
+    <section class="hero"><div class="hero-slides" aria-hidden="true"><img class="heroart hero-slide is-active" id="heroImage" alt="" fetchpriority="high"><img class="heroart hero-slide" id="heroImage2" alt=""><img class="heroart hero-slide" id="heroImage3" alt=""></div>
       <div class="heroshade"></div>
       <div class="wrap">
         <p class="eyebrow" data-text="eyebrow"></p>
         <h1 data-text="headline"></h1>
         <p class="desc" data-text="intro"></p><a class="cta" href="#products">제품 살펴보기</a>
       </div>
+      <div class="hero-controls" aria-label="메인 사진 전환"><button class="hero-prev" type="button" aria-label="이전 사진">‹</button><button class="hero-dot is-active" type="button" aria-label="첫 번째 사진" aria-pressed="true">01</button><button class="hero-dot" type="button" aria-label="두 번째 사진" aria-pressed="false">02</button><button class="hero-dot" type="button" aria-label="세 번째 사진" aria-pressed="false">03</button><button class="hero-next" type="button" aria-label="다음 사진">›</button><button class="hero-pause" type="button" aria-label="자동 전환 일시정지" aria-pressed="false">Ⅱ</button></div>
       <div class="herobottom"><span>CONNECTING INDUSTRY. BUILDING TRUST.</span><span>SCROLL TO EXPLORE</span></div>
     </section>
     <div class="wrap">
@@ -226,7 +227,7 @@
     <p id="detailText"></p><button class="cta" id="detailContact">문의 정보 보기</button>
   </dialog>
   <script src="./data/site-data.js?v=20261120-company" defer></script>
-  <script src="./js/main.js?v=20261120-2" defer></script>
+  <script src="./js/main.js?v=20261120-hero" defer></script>
 <script src="./js/naver-map-config.js?v=1" defer></script>
   <script src="./js/naver-map.js?v=3" defer></script>
 </body>
