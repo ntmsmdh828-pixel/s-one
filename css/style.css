@@ -1187,3 +1187,6 @@
 .hero-feature-copy small { margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.12em;color:#badbff; }
 @media(max-width:900px){.hero-feature{left:26px;bottom:112px;max-width:calc(100% - 52px);padding:15px 18px;gap:12px}.hero-feature-icon{width:45px;height:45px}.hero-feature-icon svg{width:42px;height:42px}.hero-controls{bottom:65px}}
 @media(max-width:720px){.hero-feature{left:18px;right:18px;bottom:112px;max-width:none;padding:13px 15px;gap:11px}.hero-feature-copy strong{font-size:20px}.hero-feature-copy span{font-size:12px}.hero-feature-copy small{font-size:9px}.hero-feature-icon{width:39px;height:39px}.hero-feature-icon svg{width:37px;height:37px}.hero-controls{bottom:67px}}
+
+/* Make the floating hero feature caption semi-transparent, as requested. */
+.hero .hero-feature { background:rgba(6,30,66,.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px); }
