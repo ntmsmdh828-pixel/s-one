@@ -16,28 +16,84 @@ window.SONE_SITE_DATA = {
   "aboutImage": "./image/about.jpg",
   "products": [
     {
-      "name": "배관 시스템",
-      "en": "PIPING SYSTEMS",
+      "name": "PPR 배관",
+      "en": "PPR PIPING",
       "category": "piping",
-      "text": "사용 환경에 맞는 배관 제품과 연결 솔루션을 소개합니다.",
-      "detail": "제품 소개 예시입니다. 실제 취급 소재, 규격, 사용 온도, 적용 기준 및 공급 범위를 입력해 주세요.",
+      "text": "온수·냉수 등 용도에 맞는 PPR 배관 시스템",
+      "detail": "PPR 배관 적용 조건 및 취급 규격은 상담을 통해 확인해 주세요.",
       "image": "https://images.pexels.com/photos/7937309/pexels-photo-7937309.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
-      "name": "가공 제품 · 부품",
-      "en": "CUSTOMIZED PARTS",
+      "name": "PVDF 배관",
+      "en": "PVDF PIPING",
+      "category": "piping",
+      "text": "내화학성이 요구되는 설비의 배관 소재",
+      "detail": "PVDF 배관의 적용 유체·온도·압력 및 공급 범위는 확인이 필요합니다.",
+      "image": "./image/vedatzorluer-pipe-986318_1920.jpg"
+    },
+    {
+      "name": "PVC · C-PVC 배관",
+      "en": "PVC / C-PVC",
+      "category": "piping",
+      "text": "용도와 운전 조건에 따른 플라스틱 배관 선택",
+      "detail": "PVC 및 C-PVC 배관의 실제 취급 규격과 적용 가능 조건은 문의해 주세요.",
+      "image": "./image/pexels-742233999-18540321.jpg"
+    },
+    {
+      "name": "PE · PB 배관",
+      "en": "PE / PB PIPING",
+      "category": "piping",
+      "text": "현장 배관 구성에 활용되는 플라스틱 소재",
+      "detail": "PE 및 PB 소재별 공급 가능 제품과 연결 방식은 확인 후 안내합니다.",
+      "image": "./image/pexels-lezginepik-5476051.jpg"
+    },
+    {
+      "name": "맞춤 가공 부품",
+      "en": "CUSTOM PARTS",
       "category": "parts",
-      "text": "현장의 도면과 요구 사항에 맞춘 제품을 소개합니다.",
-      "detail": "가공 제품 소개 예시입니다. 가공 가능 소재, 치수 범위, 도면 검토 및 납기 안내를 입력해 주세요.",
+      "text": "도면과 현장 조건을 고려한 부품 제작 검토",
+      "detail": "도면·소재·수량·공차를 전달해 주시면 제작 가능 여부를 검토할 수 있습니다.",
       "image": "https://images.pexels.com/photos/38028968/pexels-photo-38028968.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
-      "name": "기술 상담 · 지원",
-      "en": "TECHNICAL SUPPORT",
+      "name": "배관 연결 부품",
+      "en": "FITTINGS & JOINTS",
+      "category": "parts",
+      "text": "엘보·티·소켓 등 배관 연결 부품 소개",
+      "detail": "연결 부품의 소재·규격·연결 방식 및 공급 여부는 문의해 주세요.",
+      "image": "./image/vedatzorluer-pipe-986318_1920.jpg"
+    },
+    {
+      "name": "플랜지 · 어댑터",
+      "en": "FLANGES & ADAPTERS",
+      "category": "parts",
+      "text": "배관과 장비 사이의 연결에 필요한 구성품",
+      "detail": "플랜지 및 어댑터의 규격과 제작 가능 범위는 별도 확인이 필요합니다.",
+      "image": "./image/pexels-742233999-18540321.jpg"
+    },
+    {
+      "name": "소재 · 규격 상담",
+      "en": "MATERIAL SELECTION",
       "category": "support",
-      "text": "제품 선정부터 적용 검토까지 필요한 정보를 안내합니다.",
-      "detail": "기술 지원 소개 예시입니다. 제공 가능한 상담 범위와 필요한 자료, 담당 부서 연락처를 입력해 주세요.",
+      "text": "사용 환경에 맞는 배관 소재와 규격 검토",
+      "detail": "사용 유체·온도·압력·배관 크기 등의 정보를 바탕으로 상담을 진행합니다.",
       "image": "https://images.pexels.com/photos/40786137/pexels-photo-40786137.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    },
+    {
+      "name": "도면 · 제작 검토",
+      "en": "DRAWING REVIEW",
+      "category": "support",
+      "text": "현장 도면을 기준으로 제작 가능 여부 확인",
+      "detail": "도면과 요구 사양을 공유해 주시면 검토 가능한 범위를 안내합니다.",
+      "image": "./image/pexels-742233999-18540321.jpg"
+    },
+    {
+      "name": "납품 · 프로젝트 문의",
+      "en": "PROJECT INQUIRY",
+      "category": "support",
+      "text": "제품 공급 일정과 프로젝트 요구 사항 상담",
+      "detail": "수량·납기·납품 조건에 따른 진행 가능 여부를 확인해 주세요.",
+      "image": "./image/pexels-lezginepik-5476051.jpg"
     }
   ],
   "markets": [
