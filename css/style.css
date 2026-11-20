@@ -1194,3 +1194,19 @@
 /* Align bottom strapline with the hero headline's .wrap content edge. */
 .hero .herobottom { left:max(48px, calc((100vw - 1320px) / 2 + 48px)); right:max(48px, calc((100vw - 1320px) / 2 + 48px)); z-index:3; }
 @media(max-width:1000px) { .hero .herobottom { left:28px; right:28px; } }
+
+/* PPR manufacturer comparison in existing product detail dialog. */
+#detail:has(.ppr-specs:not([hidden])) { width:min(760px,calc(100% - 32px));max-height:calc(100dvh - 40px);overflow:auto; }
+.ppr-specs[hidden] { display:none; }
+.ppr-specs { margin:22px 0 24px; }
+.ppr-tabs { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px; }
+.ppr-tab { background:#edf3fb;color:#243c60;padding:12px 18px;border:1px solid #d7e4f3;font-weight:700;border-radius:5px; }
+.ppr-tab[aria-selected="true"] { background:#2458a6;color:white;border-color:#2458a6; }
+.ppr-spec-content { border:1px solid #dce4ef;padding:20px 22px;background:#f9fbfe; }
+.ppr-spec-content h3 { font-size:20px;margin:0 0 18px; }
+.ppr-spec-table { display:grid;grid-template-columns:minmax(105px,30%) 1fr;margin:0; }
+.ppr-spec-table dt,.ppr-spec-table dd { margin:0;padding:11px 8px;border-bottom:1px solid #dce4ef;font-size:14px;line-height:1.65; }
+.ppr-spec-table dt { color:#526780;font-weight:700; }
+.ppr-spec-source { display:inline-block;margin-top:18px;color:#2458a6;font-weight:700;text-decoration:underline;text-underline-offset:3px; }
+.ppr-spec-note { margin:14px 0 0;font-size:12px;color:#62738c;line-height:1.8; }
+@media(max-width:600px) { .ppr-tab { flex:1;padding:10px 8px;font-size:13px; }.ppr-spec-content { padding:14px; }.ppr-spec-table { grid-template-columns:105px 1fr; }.ppr-spec-table dt,.ppr-spec-table dd { font-size:12px; } }

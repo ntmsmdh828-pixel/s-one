@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="서원씨앤씨 홈페이지 디자인 초안">
   <title>서원씨앤씨 | 산업을 잇는 더 나은 기술</title>
-  <link rel="stylesheet" href="./css/style.css?v=20261120-align-bottom">
+  <link rel="stylesheet" href="./css/style.css?v=20261120-ppr-tabs">
 </head>
 
 <body>
@@ -236,10 +236,10 @@
   <dialog id="detail"><button class="close" id="closeDetail">닫기</button>
     <p class="eyebrow" id="detailLabel"></p>
     <h2 id="detailTitle"></h2>
-    <p id="detailText"></p><button class="cta" id="detailContact">문의 정보 보기</button>
+    <p id="detailText"></p><div id="pprSpecs" class="ppr-specs" hidden><div class="ppr-tabs" id="pprTabs" role="tablist" aria-label="PPR 제조사 선택"></div><div id="pprSpecContent" class="ppr-spec-content" role="tabpanel"></div><p class="ppr-spec-note">제조사 제품군의 참고 사양입니다. 실제 취급·납품 가능 모델, 압력·온도별 허용 조건 및 선급 승인 범위는 문의 시 확인해 주세요.</p></div><button class="cta" id="detailContact">문의 정보 보기</button>
   </dialog>
-  <script src="./data/site-data.js?v=20261120-company" defer></script>
-  <script src="./js/main.js?v=20261120-marine-power" defer></script>
+  <script src="./data/site-data.js?v=20261120-ppr-tabs" defer></script>
+  <script src="./js/main.js?v=20261120-ppr-tabs" defer></script>
 <script src="./js/naver-map-config.js?v=1" defer></script>
   <script src="./js/naver-map.js?v=3" defer></script>
 </body>
