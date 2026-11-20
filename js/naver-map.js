@@ -23,7 +23,16 @@
       status.remove();
       const position = new naver.maps.LatLng(lat, lng);
       const map = new naver.maps.Map(element, { center: position, zoom: Number(cfg.zoom) || 16, scrollWheel: false });
-      const marker = new naver.maps.Marker({ position: position, map: map, title: cfg.name || '서원씨앤씨' });
+      // Render the marker locally so content blockers cannot block the default PNG icon.
+      const marker = new naver.maps.Marker({
+        position: position,
+        map: map,
+        title: cfg.name || '서원씨앤씨',
+        icon: {
+          content: '<div style="background:#2458a6;color:#fff;border:2px solid #fff;border-radius:22px;padding:9px 14px;white-space:nowrap;font-weight:700;font-size:14px;box-shadow:0 3px 12px #152a4866;">📍 서원씨앤씨</div>',
+          anchor: new naver.maps.Point(70, 40)
+        }
+      });
       const info = new naver.maps.InfoWindow({ content: '<div style="padding:12px 16px;font-size:14px;font-weight:700;color:#1c3154;">(주)서원씨앤씨</div>' });
       naver.maps.Event.addListener(marker, 'click', function () { info.open(map, marker); });
     } catch (e) { failure(); }
