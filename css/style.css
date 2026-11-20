@@ -1190,3 +1190,7 @@
 
 /* Make the floating hero feature caption semi-transparent, as requested. */
 .hero .hero-feature { background:rgba(6,30,66,.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px); }
+
+/* Align bottom strapline with the hero headline's .wrap content edge. */
+.hero .herobottom { left:max(48px, calc((100vw - 1320px) / 2 + 48px)); right:max(48px, calc((100vw - 1320px) / 2 + 48px)); z-index:3; }
+@media(max-width:1000px) { .hero .herobottom { left:28px; right:28px; } }
