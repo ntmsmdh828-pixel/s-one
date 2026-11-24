@@ -1217,5 +1217,5 @@
 @media(max-width:720px) {.brand-wordmark {width:102px;max-height:34px;} }
 
 /* Visually align the Korean wordmark baseline with the original S-one logo swoosh. */
-.brand .brand-wordmark { transform:translateY(6px); }
-@media(max-width:720px) { .brand .brand-wordmark { transform:translateY(4px); } }
+.brand .brand-wordmark { transform:translateY(3px); }
+@media(max-width:720px) { .brand .brand-wordmark { transform:translateY(2px); } }
