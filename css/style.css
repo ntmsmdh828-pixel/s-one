@@ -1212,6 +1212,6 @@
 @media(max-width:600px) { .ppr-tab { flex:1;padding:10px 8px;font-size:13px; }.ppr-spec-content { padding:14px; }.ppr-spec-table { grid-template-columns:105px 1fr; }.ppr-spec-table dt,.ppr-spec-table dd { font-size:12px; } }
 
 /* Wordmark from the approved Korean-only design. Original sone-logo.png is unchanged. */
-.brand-wordmark { display:block; width:clamp(108px,11vw,155px);height:auto;max-height:42px;object-fit:contain;flex-shrink:0; }
-@media(max-width:1050px) {.brand-wordmark {width:120px;} .brand {gap:8px;} }
-@media(max-width:720px) {.brand-wordmark {width:105px;max-height:34px;} }
+.brand-wordmark { display:block; width:clamp(106px,11vw,152px);height:auto;max-height:42px;object-fit:contain;flex-shrink:0; }
+@media(max-width:1050px) {.brand-wordmark {width:117px;} .brand {gap:8px;} }
+@media(max-width:720px) {.brand-wordmark {width:102px;max-height:34px;} }
